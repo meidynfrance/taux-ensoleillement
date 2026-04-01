@@ -3,7 +3,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Mentions légales',
-  description: 'Mentions légales du site Ensoleillement.fr - Informations sur l\'éditeur, l\'hébergeur et les conditions d\'utilisation.',
+  description: 'Mentions légales du site Taux-ensoleillement.fr - Informations sur l\'éditeur, l\'hébergeur et les conditions d\'utilisation.',
   alternates: {
     canonical: 'https://taux-ensoleillement.fr/mentions-legales',
   },
@@ -29,9 +29,10 @@ export default function MentionsLegales() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Éditeur du site</h2>
           <p className="text-gray-700 leading-relaxed">
             Le site <strong>taux-ensoleillement.fr</strong> est édité par :<br />
-            Éditeur : Taux-Ensoleillement.fr<br />
+            EI Meidy BAFFOU (Entreprise Individuelle)<br />
+            SIRET : 80473268300045<br />
             Email : contact@taux-ensoleillement.fr<br />
-            Directeur de la publication : Le responsable du site taux-ensoleillement.fr
+            Directeur de la publication : Meidy BAFFOU
           </p>
         </section>
 
@@ -40,19 +41,23 @@ export default function MentionsLegales() {
           <p className="text-gray-700 leading-relaxed">
             Le site est hébergé par :<br />
             Vercel Inc.<br />
-            440 N Bashaw St, San Francisco, CA 94107, États-Unis<br />
+            340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis<br />
             Site web : <a href="https://vercel.com" className="text-amber-600 hover:text-amber-700" target="_blank" rel="noopener noreferrer">vercel.com</a>
+          </p>
+          <p className="text-gray-700 leading-relaxed mt-3">
+            Base de données hébergée par :<br />
+            Supabase Inc.<br />
+            San Francisco, CA, États-Unis<br />
+            Site web : <a href="https://supabase.com" className="text-amber-600 hover:text-amber-700" target="_blank" rel="noopener noreferrer">supabase.com</a>
           </p>
         </section>
 
         <section>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">3. Propriété intellectuelle</h2>
           <p className="text-gray-700 leading-relaxed">
-            L&apos;ensemble du contenu du site taux-ensoleillement.fr (textes, images, graphiques, logo, icônes, etc.)
-            est protégé par le droit d&apos;auteur et le droit de la propriété intellectuelle. Toute reproduction,
-            représentation, modification, publication ou adaptation de tout ou partie des éléments du site,
-            quel que soit le moyen ou le procédé utilisé, est interdite sans l&apos;autorisation écrite préalable
-            de l&apos;éditeur.
+            L&apos;ensemble du contenu du site taux-ensoleillement.fr (textes, images, graphiques, logo, icônes,
+            code source, design) est protégé par le droit d&apos;auteur et le droit de la propriété intellectuelle.
+            Toute reproduction, même partielle, est interdite sans l&apos;autorisation écrite préalable de l&apos;éditeur.
           </p>
         </section>
 
@@ -68,9 +73,9 @@ export default function MentionsLegales() {
         <section>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Limitation de responsabilité</h2>
           <p className="text-gray-700 leading-relaxed">
-            L&apos;éditeur s&apos;efforce de fournir des informations aussi précises que possible. Toutefois, il ne
-            pourra être tenu responsable des omissions, des inexactitudes et des carences dans la mise à jour,
-            qu&apos;elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.
+            Le site taux-ensoleillement.fr est fourni « en l&apos;état ». L&apos;éditeur ne pourra être tenu
+            responsable des dommages directs ou indirects liés à l&apos;utilisation du service, y compris
+            l&apos;indisponibilité, la perte de données ou l&apos;utilisation abusive par des tiers.
             Toutes les informations indiquées sur le site sont données à titre indicatif et sont susceptibles
             d&apos;évoluer.
           </p>
@@ -89,7 +94,7 @@ export default function MentionsLegales() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Cookies</h2>
           <p className="text-gray-700 leading-relaxed">
             Le site taux-ensoleillement.fr utilise des cookies pour améliorer l&apos;expérience utilisateur et à des
-            fins statistiques. Pour en savoir plus sur notre utilisation des cookies, veuillez consulter
+            fins publicitaires. Pour en savoir plus sur notre utilisation des cookies, veuillez consulter
             notre <a href="/politique-de-confidentialite" className="text-amber-600 hover:text-amber-700">politique de confidentialité</a>.
           </p>
         </section>
@@ -98,7 +103,7 @@ export default function MentionsLegales() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">8. Droit applicable</h2>
           <p className="text-gray-700 leading-relaxed">
             Les présentes mentions légales sont régies par le droit français. En cas de litige, les tribunaux
-            français seront seuls compétents.
+            compétents de Paris seront seuls compétents.
           </p>
         </section>
       </div>

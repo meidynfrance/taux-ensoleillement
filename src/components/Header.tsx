@@ -12,9 +12,9 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0">
-            <span className="text-3xl" role="img" aria-label="soleil">☀️</span>
+            <img src="/logo.svg" alt="Taux-ensoleillement.fr" width={32} height={32} className="w-8 h-8" />
             <span className="text-lg font-bold text-gray-900 hidden sm:inline">
-              Ensoleillement<span className="text-amber-500">.fr</span>
+              Taux-ensoleillement<span className="text-amber-500">.fr</span>
             </span>
           </Link>
 

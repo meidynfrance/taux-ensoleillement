@@ -1,12 +1,19 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet';
+import { useEffect, useState, useCallback, useRef } from 'react';
+import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet';
 import { supabase } from '@/lib/supabase';
 import type { Departement } from '@/types';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import type { Feature, FeatureCollection, Geometry } from 'geojson';
+import type { Layer, Path, PathOptions } from 'leaflet';
 
 import 'leaflet/dist/leaflet.css';
+
+interface DeptProperties {
+  code: string;
+  nom: string;
+}
 
 function getColor(ensoleillement: number | null): string {
   if (ensoleillement === null) return '#CBD5E1';
@@ -19,37 +26,121 @@ function getColor(ensoleillement: number | null): string {
   return '#60A5FA';
 }
 
-function getRadius(ensoleillement: number | null): number {
-  if (ensoleillement === null) return 8;
-  if (ensoleillement >= 2500) return 16;
-  if (ensoleillement >= 2000) return 13;
-  if (ensoleillement >= 1700) return 11;
-  return 9;
+function lightenColor(hex: string): string {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  const lighten = (c: number) => Math.min(255, c + 40);
+  return `#${lighten(r).toString(16).padStart(2, '0')}${lighten(g).toString(16).padStart(2, '0')}${lighten(b).toString(16).padStart(2, '0')}`;
 }
 
 export default function SunshineMap() {
   const [departements, setDepartements] = useState<Departement[]>([]);
+  const [geojson, setGeojson] = useState<FeatureCollection | null>(null);
   const [loading, setLoading] = useState(true);
+  const router = useRouter();
+  const deptMapRef = useRef<Map<string, Departement>>(new Map());
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data, error } = await supabase
-          .from('departements')
-          .select('code, nom, slug, ensoleillement_moyen, latitude, longitude')
-          .not('latitude', 'is', null)
-          .not('longitude', 'is', null);
+        const [supabaseResult, geoResponse] = await Promise.all([
+          supabase
+            .from('departements')
+            .select('code, nom, slug, region_code, ensoleillement_moyen, latitude, longitude'),
+          fetch('/data/departements.geojson'),
+        ]);
 
-        if (error) throw error;
-        setDepartements((data as Departement[]) || []);
+        if (supabaseResult.error) throw supabaseResult.error;
+        const depts = (supabaseResult.data as Departement[]) || [];
+        setDepartements(depts);
+
+        const map = new Map<string, Departement>();
+        depts.forEach((d) => map.set(d.code, d));
+        deptMapRef.current = map;
+
+        const geo = await geoResponse.json();
+        setGeojson(geo as FeatureCollection);
       } catch {
         setDepartements([]);
+        setGeojson(null);
       } finally {
         setLoading(false);
       }
     }
     fetchData();
   }, []);
+
+  const style = useCallback(
+    (feature: Feature<Geometry, DeptProperties> | undefined): PathOptions => {
+      if (!feature) return {};
+      const code = feature.properties?.code;
+      const dept = code ? deptMapRef.current.get(code) : undefined;
+      const ensoleillement = dept?.ensoleillement_moyen ?? null;
+      return {
+        fillColor: getColor(ensoleillement),
+        fillOpacity: 0.8,
+        color: '#ffffff',
+        weight: 1,
+      };
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [departements],
+  );
+
+  const onEachFeature = useCallback(
+    (feature: Feature<Geometry, DeptProperties>, layer: Layer) => {
+      const code = feature.properties?.code;
+      const dept = code ? deptMapRef.current.get(code) : undefined;
+      const nom = dept?.nom ?? feature.properties?.nom ?? '';
+      const ensoleillement = dept?.ensoleillement_moyen;
+
+      // Bind tooltip for hover
+      const tooltipContent = `
+        <div style="text-align:center;font-family:system-ui,sans-serif;">
+          <strong>${nom}</strong> (${code})<br/>
+          <span style="color:#d97706;font-weight:600;">
+            ${ensoleillement != null ? `${ensoleillement.toLocaleString('fr-FR')} h/an` : 'Données non disponibles'}
+          </span>
+        </div>
+      `;
+      (layer as Path).bindTooltip(tooltipContent, {
+        sticky: true,
+        direction: 'top',
+        className: 'dept-tooltip',
+      });
+
+      layer.on({
+        mouseover: (e) => {
+          const target = e.target;
+          const currentColor = getColor(dept?.ensoleillement_moyen ?? null);
+          target.setStyle({
+            weight: 3,
+            color: '#374151',
+            fillColor: lightenColor(currentColor),
+            fillOpacity: 0.9,
+          });
+          target.bringToFront();
+        },
+        mouseout: (e) => {
+          const target = e.target;
+          target.setStyle({
+            weight: 1,
+            color: '#ffffff',
+            fillColor: getColor(dept?.ensoleillement_moyen ?? null),
+            fillOpacity: 0.8,
+          });
+        },
+        click: () => {
+          if (dept?.slug) {
+            router.push(`/departement/${dept.slug}`);
+          }
+        },
+      });
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [departements, router],
+  );
 
   if (loading) {
     return (
@@ -71,39 +162,20 @@ export default function SunshineMap() {
         scrollWheelZoom={false}
       >
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://carto.com/">CARTO</a>'
+          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
         />
-        {departements.map((dept) => (
-          <CircleMarker
-            key={dept.code}
-            center={[dept.latitude!, dept.longitude!]}
-            radius={getRadius(dept.ensoleillement_moyen)}
-            pathOptions={{
-              color: '#fff',
-              weight: 2,
-              fillColor: getColor(dept.ensoleillement_moyen),
-              fillOpacity: 0.85,
-            }}
-          >
-            <Popup>
-              <div className="text-center p-1">
-                <p className="font-bold text-gray-900">{dept.nom} ({dept.code})</p>
-                <p className="text-amber-600 font-semibold">
-                  {dept.ensoleillement_moyen
-                    ? `${dept.ensoleillement_moyen.toLocaleString('fr-FR')} h/an`
-                    : 'Données non disponibles'}
-                </p>
-                <Link href={`/departement/${dept.slug}`} className="text-blue-600 text-sm underline">
-                  Voir le détail
-                </Link>
-              </div>
-            </Popup>
-          </CircleMarker>
-        ))}
+        {geojson && (
+          <GeoJSON
+            key={departements.length}
+            data={geojson}
+            style={style}
+            onEachFeature={onEachFeature}
+          />
+        )}
       </MapContainer>
 
-      {/* Legend */}
+      {/* Légende */}
       <div className="flex flex-wrap items-center justify-center gap-3 py-3 px-4 bg-white border-t border-gray-200 text-xs">
         {[
           { color: '#60A5FA', label: '< 1 500 h' },

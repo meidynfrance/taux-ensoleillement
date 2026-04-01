@@ -14,6 +14,7 @@ export default function MonthlyChart({ commune }: MonthlyChartProps) {
   }));
 
   const maxValue = Math.max(...data.map((d) => d.value ?? 0), 1);
+  const chartHeight = 240;
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
@@ -22,29 +23,26 @@ export default function MonthlyChart({ commune }: MonthlyChartProps) {
       </h2>
 
       {/* Bar chart */}
-      <div className="flex items-end gap-2 sm:gap-3 h-64 mb-4">
+      <div className="flex items-end gap-2 sm:gap-3 mb-4" style={{ height: `${chartHeight}px` }}>
         {data.map((d) => {
-          const height = d.value !== null ? (d.value / maxValue) * 100 : 0;
+          const barHeight = d.value !== null ? Math.max((d.value / maxValue) * chartHeight, 4) : 0;
           return (
-            <div key={d.mois} className="flex-1 flex flex-col items-center gap-1">
+            <div key={d.mois} className="flex-1 flex flex-col items-center justify-end h-full">
               <span className="text-xs font-semibold text-gray-700 mb-1">
                 {d.value !== null ? d.value : '--'}
               </span>
-              <div className="w-full flex items-end" style={{ height: '100%' }}>
-                <div
-                  className="w-full rounded-t-md transition-all duration-500"
-                  style={{
-                    height: `${height}%`,
-                    minHeight: d.value !== null ? '4px' : '0',
-                    background: `linear-gradient(to top, #F59E0B, #FBBF24)`,
-                  }}
-                  title={`${d.label} : ${d.value ?? 'N/A'} heures`}
-                />
-              </div>
-              <span className="text-xs text-gray-500 mt-1 hidden sm:block">
+              <div
+                className="w-full rounded-t-md"
+                style={{
+                  height: `${barHeight}px`,
+                  background: 'linear-gradient(to top, #F59E0B, #FBBF24)',
+                }}
+                title={`${d.label} : ${d.value ?? 'N/A'} heures`}
+              />
+              <span className="text-xs text-gray-500 mt-2 hidden sm:block">
                 {d.label.slice(0, 3)}
               </span>
-              <span className="text-xs text-gray-500 mt-1 sm:hidden">
+              <span className="text-xs text-gray-500 mt-2 sm:hidden">
                 {d.label.charAt(0)}
               </span>
             </div>

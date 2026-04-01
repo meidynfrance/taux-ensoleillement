@@ -3,7 +3,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Politique de confidentialité',
-  description: 'Politique de confidentialité d\'Ensoleillement.fr - RGPD, cookies, données personnelles et droits des utilisateurs.',
+  description: 'Politique de confidentialité de Taux-ensoleillement.fr - RGPD, cookies, données personnelles et droits des utilisateurs.',
   alternates: {
     canonical: 'https://taux-ensoleillement.fr/politique-de-confidentialite',
   },
@@ -39,8 +39,11 @@ export default function PolitiqueConfidentialite() {
         <section>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Responsable du traitement</h2>
           <p className="text-gray-700 leading-relaxed">
-            Le responsable du traitement des données est l&apos;éditeur du site taux-ensoleillement.fr,
-            tel que défini dans les <a href="/mentions-legales" className="text-amber-600 hover:text-amber-700">mentions légales</a>.
+            Le responsable du traitement des données est :<br />
+            EI Meidy BAFFOU<br />
+            SIRET : 80473268300045<br />
+            Email : contact@taux-ensoleillement.fr<br />
+            Voir nos <a href="/mentions-legales" className="text-amber-600 hover:text-amber-700">mentions légales</a> pour plus de détails.
           </p>
         </section>
 

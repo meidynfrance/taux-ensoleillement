@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Contact - Ensoleillement.fr',
-  description: 'Contactez l\'équipe d\'Ensoleillement.fr pour toute question sur les données d\'ensoleillement en France.',
+  title: 'Contact - Taux-ensoleillement.fr',
+  description: 'Contactez l\'équipe de Taux-ensoleillement.fr pour toute question sur les données d\'ensoleillement en France.',
   alternates: {
     canonical: 'https://taux-ensoleillement.fr/contact',
   },

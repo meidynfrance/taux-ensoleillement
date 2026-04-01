@@ -8,7 +8,8 @@ export default function Footer() {
           {/* A propos */}
           <div>
             <h3 className="text-white font-semibold text-lg mb-4 flex items-center gap-2">
-              <span>☀️</span> Ensoleillement.fr
+              <img src="/logo.svg" alt="Taux-ensoleillement.fr" width={24} height={24} className="w-6 h-6" />
+              Taux-ensoleillement<span className="text-amber-500">.fr</span>
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               Retrouvez les données d&apos;ensoleillement de toutes les communes de France.
@@ -56,7 +57,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-10 pt-8 text-center text-sm text-gray-500">
-          <p>&copy; {new Date().getFullYear()} Ensoleillement.fr - Toutes les données d&apos;ensoleillement en France. Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear()} Taux-ensoleillement.fr - Toutes les données d&apos;ensoleillement en France. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

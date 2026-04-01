@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    siteName: 'Ensoleillement.fr',
+    siteName: 'Taux-ensoleillement.fr',
     title: "Ensoleillement en France - Heures de soleil par commune",
     description:
       "Retrouvez les données d'ensoleillement de toutes les communes de France. Carte interactive et classements.",
@@ -59,7 +59,7 @@ export default function RootLayout({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Ensoleillement.fr',
+    name: 'Taux-ensoleillement.fr',
     url: 'https://taux-ensoleillement.fr',
     description: "Données d'ensoleillement de toutes les communes de France",
     potentialAction: {
@@ -72,6 +72,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${inter.variable} h-full antialiased`}>
       <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

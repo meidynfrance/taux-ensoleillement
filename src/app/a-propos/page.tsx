@@ -4,7 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'À propos - Ensoleillement en France',
-  description: 'En savoir plus sur Ensoleillement.fr, le site de référence pour consulter les données d\'ensoleillement de toutes les communes de France.',
+  description: 'En savoir plus sur Taux-ensoleillement.fr, le site de référence pour consulter les données d\'ensoleillement de toutes les communes de France.',
   alternates: {
     canonical: 'https://taux-ensoleillement.fr/a-propos',
   },
@@ -21,13 +21,13 @@ export default function APropos() {
       />
 
       <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8">
-        À propos d&apos;Ensoleillement.fr
+        À propos de Taux-ensoleillement.fr
       </h1>
 
       <div className="prose prose-gray max-w-none space-y-6">
         <div className="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-xl p-6 mb-8">
           <p className="text-lg text-gray-800 leading-relaxed">
-            <strong>Ensoleillement.fr</strong> est le site de référence pour consulter les données
+            <strong>Taux-ensoleillement.fr</strong> est le site de référence pour consulter les données
             d&apos;ensoleillement de toutes les communes de France. Notre mission : vous fournir des
             informations précises et détaillées sur le nombre d&apos;heures de soleil dans chaque ville,
             département et région de France.
