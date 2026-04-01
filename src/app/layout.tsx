@@ -74,6 +74,15 @@ export default function RootLayout({
     <html lang="fr" className={`${inter.variable} h-full antialiased`}>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body className="min-h-full flex flex-col bg-gray-50 text-gray-900">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-PKF48JF2J9"
           strategy="afterInteractive"
@@ -86,15 +95,6 @@ export default function RootLayout({
             gtag('config', 'G-PKF48JF2J9');
           `}
         </Script>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
-      <body className="min-h-full flex flex-col bg-gray-50 text-gray-900">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
       </body>
     </html>
   );
