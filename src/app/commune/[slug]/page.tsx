@@ -254,8 +254,8 @@ export default async function CommunePage({ params }: PageProps) {
               {commune.ensoleillement_annuel !== null ? (
                 <>
                   <p>
-                    La commune de {commune.nom} bénéficie de <strong>{commune.ensoleillement_annuel.toLocaleString('fr-FR')} heures
-                    d&apos;ensoleillement par an</strong>, ce qui la place{' '}
+                    La commune de {commune.nom} bénéficie de{' '}
+                    <strong>{commune.ensoleillement_annuel.toLocaleString('fr-FR')} heures d&apos;ensoleillement par an</strong>, ce qui la place{' '}
                     {comparaisonNationale !== null && comparaisonNationale > 200
                       ? 'nettement au-dessus'
                       : comparaisonNationale !== null && comparaisonNationale > 0
@@ -266,14 +266,12 @@ export default async function CommunePage({ params }: PageProps) {
                     de la moyenne nationale de {moyenneNationale.toLocaleString('fr-FR')} heures.
                   </p>
                   <p>
-                    Les mois les plus ensoleillés à {commune.nom} sont généralement juin, juillet et août,
-                    tandis que les mois d&apos;hiver (décembre, janvier) sont les moins lumineux.
+                    Les mois les plus ensoleillés à {commune.nom}{' '}sont généralement juin, juillet et août, tandis que les mois d&apos;hiver (décembre, janvier) sont les moins lumineux.
                   </p>
                   {dept?.ensoleillement_moyen && (
                     <p>
-                      Par rapport à la moyenne du département {dept.nom} ({dept.ensoleillement_moyen.toLocaleString('fr-FR')} h/an),
-                      {commune.nom} {comparaisonDept !== null && comparaisonDept >= 0 ? 'profite de davantage' : 'reçoit moins'} d&apos;heures
-                      de soleil.
+                      Par rapport à la moyenne du département {dept.nom} ({dept.ensoleillement_moyen.toLocaleString('fr-FR')} h/an),{' '}
+                      {commune.nom}{' '}{comparaisonDept !== null && comparaisonDept >= 0 ? 'profite de davantage' : 'reçoit moins'}{' '}d&apos;heures de soleil.
                     </p>
                   )}
                 </>

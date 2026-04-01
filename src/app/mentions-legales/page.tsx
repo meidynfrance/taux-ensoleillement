@@ -29,10 +29,9 @@ export default function MentionsLegales() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Éditeur du site</h2>
           <p className="text-gray-700 leading-relaxed">
             Le site <strong>taux-ensoleillement.fr</strong> est édité par :<br />
-            Nom : [Nom de l&apos;éditeur]<br />
-            Adresse : [Adresse postale]<br />
+            Éditeur : Taux-Ensoleillement.fr<br />
             Email : contact@taux-ensoleillement.fr<br />
-            Directeur de la publication : [Nom du directeur de publication]
+            Directeur de la publication : Le responsable du site taux-ensoleillement.fr
           </p>
         </section>
 
