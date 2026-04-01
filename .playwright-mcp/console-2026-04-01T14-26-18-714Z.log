@@ -1,2 +1,0 @@
-[      70ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3456/_next/static/chunks/16n9csl--we3i.css:0
-[    3111ms] [WARNING] The resource http://localhost:3456/_next/static/chunks/16n9csl--we3i.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3456/region/ile-de-france:0
