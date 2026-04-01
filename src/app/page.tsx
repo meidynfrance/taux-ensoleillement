@@ -3,6 +3,7 @@ import { supabase } from '@/lib/supabase';
 import SearchBar from '@/components/SearchBar';
 import CommuneCard from '@/components/CommuneCard';
 import SunshineMapLoader from '@/components/SunshineMapLoader';
+import CompareCommunes from '@/components/CompareCommunes';
 import type { Commune, Departement } from '@/types';
 
 export const revalidate = 86400;
@@ -76,6 +77,9 @@ export default async function HomePage() {
         </p>
         <SunshineMapLoader />
       </section>
+
+      {/* Compare */}
+      <CompareCommunes />
 
       {/* Top Communes */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
