@@ -1,0 +1,255 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "soleil Ensoleillement.fr" [ref=e5] [cursor=pointer]:
+          - /url: /
+          - img "soleil" [ref=e6]: ☀️
+          - generic [ref=e7]: Ensoleillement.fr
+        - generic [ref=e8]:
+          - link "Accueil" [ref=e9] [cursor=pointer]:
+            - /url: /
+          - link "Régions" [ref=e10] [cursor=pointer]:
+            - /url: /region
+          - link "Départements" [ref=e11] [cursor=pointer]:
+            - /url: /departement
+          - link "À propos" [ref=e12] [cursor=pointer]:
+            - /url: /a-propos
+  - main [ref=e13]:
+    - generic [ref=e14]:
+      - navigation "Fil d'Ariane" [ref=e15]:
+        - list [ref=e16]:
+          - listitem [ref=e17]:
+            - link "Accueil" [ref=e18] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e19]:
+            - generic [ref=e20]: /
+            - link "Provence-Alpes-Côte d'Azur" [ref=e21] [cursor=pointer]:
+              - /url: /region/provence-alpes-cote-d-azur
+          - listitem [ref=e22]:
+            - generic [ref=e23]: /
+            - link "Bouches-du-Rhône" [ref=e24] [cursor=pointer]:
+              - /url: /departement/bouches-du-rhone-13
+          - listitem [ref=e25]:
+            - generic [ref=e26]: /
+            - generic [ref=e27]: Marseille
+      - generic [ref=e28]:
+        - heading "Taux d'ensoleillement à Marseille Bouches-du-Rhône - 13001" [level=1] [ref=e29]:
+          - text: Taux d'ensoleillement à Marseille
+          - generic [ref=e30]: Bouches-du-Rhône - 13001
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - paragraph [ref=e33]: Ensoleillement annuel
+            - paragraph [ref=e34]: 2 911 h/an
+          - generic [ref=e35]:
+            - paragraph [ref=e36]: vs. moyenne nationale
+            - paragraph [ref=e37]: +961 h
+          - generic [ref=e38]:
+            - paragraph [ref=e39]: vs. moyenne Bouches-du-Rhône
+            - paragraph [ref=e40]: +61 h
+      - generic [ref=e42]:
+        - heading "Ensoleillement mensuel à Marseille" [level=2] [ref=e43]
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - generic [ref=e46]: "131"
+            - 'generic "Janvier : 131 heures" [ref=e48]'
+            - generic [ref=e49]: Jan
+          - generic [ref=e50]:
+            - generic [ref=e51]: "160"
+            - 'generic "Février : 160 heures" [ref=e53]'
+            - generic [ref=e54]: Fév
+          - generic [ref=e55]:
+            - generic [ref=e56]: "218"
+            - 'generic "Mars : 218 heures" [ref=e58]'
+            - generic [ref=e59]: Mar
+          - generic [ref=e60]:
+            - generic [ref=e61]: "247"
+            - 'generic "Avril : 247 heures" [ref=e63]'
+            - generic [ref=e64]: Avr
+          - generic [ref=e65]:
+            - generic [ref=e66]: "291"
+            - 'generic "Mai : 291 heures" [ref=e68]'
+            - generic [ref=e69]: Mai
+          - generic [ref=e70]:
+            - generic [ref=e71]: "349"
+            - 'generic "Juin : 349 heures" [ref=e73]'
+            - generic [ref=e74]: Jui
+          - generic [ref=e75]:
+            - generic [ref=e76]: "378"
+            - 'generic "Juillet : 378 heures" [ref=e78]'
+            - generic [ref=e79]: Jui
+          - generic [ref=e80]:
+            - generic [ref=e81]: "349"
+            - 'generic "Août : 349 heures" [ref=e83]'
+            - generic [ref=e84]: Aoû
+          - generic [ref=e85]:
+            - generic [ref=e86]: "277"
+            - 'generic "Septembre : 277 heures" [ref=e88]'
+            - generic [ref=e89]: Sep
+          - generic [ref=e90]:
+            - generic [ref=e91]: "204"
+            - 'generic "Octobre : 204 heures" [ref=e93]'
+            - generic [ref=e94]: Oct
+          - generic [ref=e95]:
+            - generic [ref=e96]: "160"
+            - 'generic "Novembre : 160 heures" [ref=e98]'
+            - generic [ref=e99]: Nov
+          - generic [ref=e100]:
+            - generic [ref=e101]: "131"
+            - 'generic "Décembre : 131 heures" [ref=e103]'
+            - generic [ref=e104]: Déc
+        - group [ref=e105]:
+          - generic "Voir le détail mensuel en tableau" [ref=e106] [cursor=pointer]
+      - generic [ref=e107]:
+        - generic [ref=e108]:
+          - heading "Informations sur Marseille" [level=2] [ref=e109]
+          - generic [ref=e110]:
+            - generic [ref=e111]:
+              - term [ref=e112]: Code postal
+              - definition [ref=e113]: "13001"
+            - generic [ref=e114]:
+              - term [ref=e115]: Code INSEE
+              - definition [ref=e116]: "13055"
+            - generic [ref=e117]:
+              - term [ref=e118]: Département
+              - definition [ref=e119]:
+                - link "Bouches-du-Rhône (13)" [ref=e120] [cursor=pointer]:
+                  - /url: /departement/bouches-du-rhone-13
+            - generic [ref=e121]:
+              - term [ref=e122]: Région
+              - definition [ref=e123]:
+                - link "Provence-Alpes-Côte d'Azur" [ref=e124] [cursor=pointer]:
+                  - /url: /region/provence-alpes-cote-d-azur
+            - generic [ref=e125]:
+              - term [ref=e126]: Population
+              - definition [ref=e127]: 886 040 hab.
+            - generic [ref=e128]:
+              - term [ref=e129]: Coordonnées
+              - definition [ref=e130]: 43.2803, 5.3806
+        - generic [ref=e131]:
+          - heading "À propos de l'ensoleillement à Marseille" [level=2] [ref=e132]
+          - generic [ref=e133]:
+            - paragraph [ref=e134]:
+              - text: La commune de Marseille bénéficie de
+              - strong [ref=e135]: 2 911heures d'ensoleillement par an
+              - text: ", ce qui la place nettement au-dessus de la moyenne nationale de 1 950 heures."
+            - paragraph [ref=e136]: Les mois les plus ensoleillés à Marseillesont généralement juin, juillet et août, tandis que les mois d'hiver (décembre, janvier) sont les moins lumineux.
+            - paragraph [ref=e137]: Par rapport à la moyenne du département Bouches-du-Rhône (2 850 h/an),Marseille profite de davantaged'heures de soleil.
+      - generic [ref=e138]:
+        - heading "Autres communes dans le Bouches-du-Rhône" [level=2] [ref=e139]
+        - paragraph [ref=e140]: Comparez l'ensoleillement de Marseille avec les autres communes du département.
+        - generic [ref=e141]:
+          - link "Carnoux-en-Provence 13470 2 948 h/an" [ref=e142] [cursor=pointer]:
+            - /url: /commune/carnoux-en-provence-13
+            - generic [ref=e143]:
+              - generic [ref=e144]:
+                - heading "Carnoux-en-Provence" [level=3] [ref=e145]
+                - paragraph [ref=e146]: "13470"
+              - generic [ref=e147]:
+                - paragraph [ref=e148]: 2 948
+                - paragraph [ref=e149]: h/an
+          - link "Coudoux 13111 2 947 h/an" [ref=e150] [cursor=pointer]:
+            - /url: /commune/coudoux-13
+            - generic [ref=e151]:
+              - generic [ref=e152]:
+                - heading "Coudoux" [level=3] [ref=e153]
+                - paragraph [ref=e154]: "13111"
+              - generic [ref=e155]:
+                - paragraph [ref=e156]: 2 947
+                - paragraph [ref=e157]: h/an
+          - link "Vitrolles 13127 2 946 h/an" [ref=e158] [cursor=pointer]:
+            - /url: /commune/vitrolles-13
+            - generic [ref=e159]:
+              - generic [ref=e160]:
+                - heading "Vitrolles" [level=3] [ref=e161]
+                - paragraph [ref=e162]: "13127"
+              - generic [ref=e163]:
+                - paragraph [ref=e164]: 2 946
+                - paragraph [ref=e165]: h/an
+          - link "Pélissanne 13330 2 946 h/an" [ref=e166] [cursor=pointer]:
+            - /url: /commune/pelissanne-13
+            - generic [ref=e167]:
+              - generic [ref=e168]:
+                - heading "Pélissanne" [level=3] [ref=e169]
+                - paragraph [ref=e170]: "13330"
+              - generic [ref=e171]:
+                - paragraph [ref=e172]: 2 946
+                - paragraph [ref=e173]: h/an
+          - link "Verquières 13670 2 945 h/an" [ref=e174] [cursor=pointer]:
+            - /url: /commune/verquieres-13
+            - generic [ref=e175]:
+              - generic [ref=e176]:
+                - heading "Verquières" [level=3] [ref=e177]
+                - paragraph [ref=e178]: "13670"
+              - generic [ref=e179]:
+                - paragraph [ref=e180]: 2 945
+                - paragraph [ref=e181]: h/an
+          - link "Paradou 13520 2 945 h/an" [ref=e182] [cursor=pointer]:
+            - /url: /commune/paradou-13
+            - generic [ref=e183]:
+              - generic [ref=e184]:
+                - heading "Paradou" [level=3] [ref=e185]
+                - paragraph [ref=e186]: "13520"
+              - generic [ref=e187]:
+                - paragraph [ref=e188]: 2 945
+                - paragraph [ref=e189]: h/an
+          - link "Orgon 13660 2 944 h/an" [ref=e190] [cursor=pointer]:
+            - /url: /commune/orgon-13
+            - generic [ref=e191]:
+              - generic [ref=e192]:
+                - heading "Orgon" [level=3] [ref=e193]
+                - paragraph [ref=e194]: "13660"
+              - generic [ref=e195]:
+                - paragraph [ref=e196]: 2 944
+                - paragraph [ref=e197]: h/an
+          - link "Vernègues 13116 2 944 h/an" [ref=e198] [cursor=pointer]:
+            - /url: /commune/vernegues-13
+            - generic [ref=e199]:
+              - generic [ref=e200]:
+                - heading "Vernègues" [level=3] [ref=e201]
+                - paragraph [ref=e202]: "13116"
+              - generic [ref=e203]:
+                - paragraph [ref=e204]: 2 944
+                - paragraph [ref=e205]: h/an
+        - link "Voir toutes les communes du Bouches-du-Rhône→" [ref=e207] [cursor=pointer]:
+          - /url: /departement/bouches-du-rhone-13
+  - contentinfo [ref=e208]:
+    - generic [ref=e209]:
+      - generic [ref=e210]:
+        - generic [ref=e211]:
+          - heading "☀️ Ensoleillement.fr" [level=3] [ref=e212]:
+            - generic [ref=e213]: ☀️
+            - text: Ensoleillement.fr
+          - paragraph [ref=e214]: Retrouvez les données d'ensoleillement de toutes les communes de France. Comparez les heures de soleil par département et par région.
+        - generic [ref=e215]:
+          - heading "Navigation" [level=3] [ref=e216]
+          - list [ref=e217]:
+            - listitem [ref=e218]:
+              - link "Accueil" [ref=e219] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e220]:
+              - link "Régions de France" [ref=e221] [cursor=pointer]:
+                - /url: /region
+            - listitem [ref=e222]:
+              - link "Départements de France" [ref=e223] [cursor=pointer]:
+                - /url: /departement
+            - listitem [ref=e224]:
+              - link "À propos" [ref=e225] [cursor=pointer]:
+                - /url: /a-propos
+            - listitem [ref=e226]:
+              - link "Contact" [ref=e227] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e228]:
+          - heading "Informations légales" [level=3] [ref=e229]
+          - list [ref=e230]:
+            - listitem [ref=e231]:
+              - link "Mentions légales" [ref=e232] [cursor=pointer]:
+                - /url: /mentions-legales
+            - listitem [ref=e233]:
+              - link "Politique de confidentialité" [ref=e234] [cursor=pointer]:
+                - /url: /politique-de-confidentialite
+            - listitem [ref=e235]:
+              - link "Plan du site" [ref=e236] [cursor=pointer]:
+                - /url: /sitemap.xml
+      - paragraph [ref=e238]: © 2026 Ensoleillement.fr - Toutes les données d'ensoleillement en France. Tous droits réservés.
+  - alert [ref=e239]

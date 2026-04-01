@@ -1,0 +1,1175 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "soleil Ensoleillement.fr" [ref=e5] [cursor=pointer]:
+          - /url: /
+          - img "soleil" [ref=e6]: ☀️
+          - generic [ref=e7]: Ensoleillement.fr
+        - generic [ref=e8]:
+          - link "Accueil" [ref=e9] [cursor=pointer]:
+            - /url: /
+          - link "Régions" [ref=e10] [cursor=pointer]:
+            - /url: /region
+          - link "Départements" [ref=e11] [cursor=pointer]:
+            - /url: /departement
+          - link "À propos" [ref=e12] [cursor=pointer]:
+            - /url: /a-propos
+  - main [ref=e13]:
+    - generic [ref=e14]:
+      - navigation "Fil d'Ariane" [ref=e15]:
+        - list [ref=e16]:
+          - listitem [ref=e17]:
+            - link "Accueil" [ref=e18] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e19]:
+            - generic [ref=e20]: /
+            - link "Provence-Alpes-Côte d'Azur" [ref=e21] [cursor=pointer]:
+              - /url: /region/provence-alpes-cote-d-azur
+          - listitem [ref=e22]:
+            - generic [ref=e23]: /
+            - generic [ref=e24]: Bouches-du-Rhône (13)
+      - heading "Ensoleillement dans le Bouches-du-Rhône Département 13 — Provence-Alpes-Côte d'Azur" [level=1] [ref=e25]:
+        - text: Ensoleillement dans le Bouches-du-Rhône
+        - generic [ref=e26]: Département 13 — Provence-Alpes-Côte d'Azur
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - paragraph [ref=e29]: Ensoleillement moyen
+          - paragraph [ref=e30]: 2 850 h/an
+        - generic [ref=e31]:
+          - paragraph [ref=e32]: Communes
+          - paragraph [ref=e33]: "119"
+        - generic [ref=e34]:
+          - paragraph [ref=e35]: Maximum
+          - paragraph [ref=e36]: 2 948 h
+        - generic [ref=e37]:
+          - paragraph [ref=e38]: Minimum
+          - paragraph [ref=e39]: 2 752 h
+      - generic [ref=e40]:
+        - heading "L'ensoleillement dans le Bouches-du-Rhône" [level=2] [ref=e41]
+        - paragraph [ref=e42]:
+          - text: Le département du Bouches-du-Rhône (13) bénéficie en moyenne de 2 850 heures d'ensoleillement par an. Il fait partie de la région
+          - link "Provence-Alpes-Côte d'Azur" [ref=e43] [cursor=pointer]:
+            - /url: /region/provence-alpes-cote-d-azur
+          - text: . Retrouvez ci-dessous le classement des 119 communes du département classées par heures d'ensoleillement annuel.
+      - heading "Toutes les communes du Bouches-du-Rhône par ensoleillement" [level=2] [ref=e44]
+      - table [ref=e47]:
+        - rowgroup [ref=e48]:
+          - row "# Commune Code postal Population Ensoleillement" [ref=e49]:
+            - columnheader "#" [ref=e50]
+            - columnheader "Commune" [ref=e51]
+            - columnheader "Code postal" [ref=e52]
+            - columnheader "Population" [ref=e53]
+            - columnheader "Ensoleillement" [ref=e54]
+        - rowgroup [ref=e55]:
+          - row "1 Carnoux-en-Provence 13470 6 873 2 948 h" [ref=e56]:
+            - cell "1" [ref=e57]
+            - cell "Carnoux-en-Provence" [ref=e58]:
+              - link "Carnoux-en-Provence" [ref=e59] [cursor=pointer]:
+                - /url: /commune/carnoux-en-provence-13
+            - cell "13470" [ref=e60]
+            - cell "6 873" [ref=e61]
+            - cell "2 948 h" [ref=e62]:
+              - generic [ref=e63]: 2 948 h
+          - row "2 Coudoux 13111 3 825 2 947 h" [ref=e64]:
+            - cell "2" [ref=e65]
+            - cell "Coudoux" [ref=e66]:
+              - link "Coudoux" [ref=e67] [cursor=pointer]:
+                - /url: /commune/coudoux-13
+            - cell "13111" [ref=e68]
+            - cell "3 825" [ref=e69]
+            - cell "2 947 h" [ref=e70]:
+              - generic [ref=e71]: 2 947 h
+          - row "3 Pélissanne 13330 11 085 2 946 h" [ref=e72]:
+            - cell "3" [ref=e73]
+            - cell "Pélissanne" [ref=e74]:
+              - link "Pélissanne" [ref=e75] [cursor=pointer]:
+                - /url: /commune/pelissanne-13
+            - cell "13330" [ref=e76]
+            - cell "11 085" [ref=e77]
+            - cell "2 946 h" [ref=e78]:
+              - generic [ref=e79]: 2 946 h
+          - row "4 Vitrolles 13127 36 758 2 946 h" [ref=e80]:
+            - cell "4" [ref=e81]
+            - cell "Vitrolles" [ref=e82]:
+              - link "Vitrolles" [ref=e83] [cursor=pointer]:
+                - /url: /commune/vitrolles-13
+            - cell "13127" [ref=e84]
+            - cell "36 758" [ref=e85]
+            - cell "2 946 h" [ref=e86]:
+              - generic [ref=e87]: 2 946 h
+          - row "5 Paradou 13520 2 159 2 945 h" [ref=e88]:
+            - cell "5" [ref=e89]
+            - cell "Paradou" [ref=e90]:
+              - link "Paradou" [ref=e91] [cursor=pointer]:
+                - /url: /commune/paradou-13
+            - cell "13520" [ref=e92]
+            - cell "2 159" [ref=e93]
+            - cell "2 945 h" [ref=e94]:
+              - generic [ref=e95]: 2 945 h
+          - row "6 Verquières 13670 772 2 945 h" [ref=e96]:
+            - cell "6" [ref=e97]
+            - cell "Verquières" [ref=e98]:
+              - link "Verquières" [ref=e99] [cursor=pointer]:
+                - /url: /commune/verquieres-13
+            - cell "13670" [ref=e100]
+            - cell "772" [ref=e101]
+            - cell "2 945 h" [ref=e102]:
+              - generic [ref=e103]: 2 945 h
+          - row "7 Orgon 13660 2 762 2 944 h" [ref=e104]:
+            - cell "7" [ref=e105]
+            - cell "Orgon" [ref=e106]:
+              - link "Orgon" [ref=e107] [cursor=pointer]:
+                - /url: /commune/orgon-13
+            - cell "13660" [ref=e108]
+            - cell "2 762" [ref=e109]
+            - cell "2 944 h" [ref=e110]:
+              - generic [ref=e111]: 2 944 h
+          - row "8 Vernègues 13116 2 166 2 944 h" [ref=e112]:
+            - cell "8" [ref=e113]
+            - cell "Vernègues" [ref=e114]:
+              - link "Vernègues" [ref=e115] [cursor=pointer]:
+                - /url: /commune/vernegues-13
+            - cell "13116" [ref=e116]
+            - cell "2 166" [ref=e117]
+            - cell "2 944 h" [ref=e118]:
+              - generic [ref=e119]: 2 944 h
+          - row "9 Ventabren 13122 5 839 2 943 h" [ref=e120]:
+            - cell "9" [ref=e121]
+            - cell "Ventabren" [ref=e122]:
+              - link "Ventabren" [ref=e123] [cursor=pointer]:
+                - /url: /commune/ventabren-13
+            - cell "13122" [ref=e124]
+            - cell "5 839" [ref=e125]
+            - cell "2 943 h" [ref=e126]:
+              - generic [ref=e127]: 2 943 h
+          - row "10 Noves 13550 6 080 2 943 h" [ref=e128]:
+            - cell "10" [ref=e129]
+            - cell "Noves" [ref=e130]:
+              - link "Noves" [ref=e131] [cursor=pointer]:
+                - /url: /commune/noves-13
+            - cell "13550" [ref=e132]
+            - cell "6 080" [ref=e133]
+            - cell "2 943 h" [ref=e134]:
+              - generic [ref=e135]: 2 943 h
+          - row "11 Mouriès 13890 3 527 2 942 h" [ref=e136]:
+            - cell "11" [ref=e137]
+            - cell "Mouriès" [ref=e138]:
+              - link "Mouriès" [ref=e139] [cursor=pointer]:
+                - /url: /commune/mouries-13
+            - cell "13890" [ref=e140]
+            - cell "3 527" [ref=e141]
+            - cell "2 942 h" [ref=e142]:
+              - generic [ref=e143]: 2 942 h
+          - row "12 Venelles 13770 8 418 2 942 h" [ref=e144]:
+            - cell "12" [ref=e145]
+            - cell "Venelles" [ref=e146]:
+              - link "Venelles" [ref=e147] [cursor=pointer]:
+                - /url: /commune/venelles-13
+            - cell "13770" [ref=e148]
+            - cell "8 418" [ref=e149]
+            - cell "2 942 h" [ref=e150]:
+              - generic [ref=e151]: 2 942 h
+          - row "13 Mollégès 13940 2 647 2 941 h" [ref=e152]:
+            - cell "13" [ref=e153]
+            - cell "Mollégès" [ref=e154]:
+              - link "Mollégès" [ref=e155] [cursor=pointer]:
+                - /url: /commune/molleges-13
+            - cell "13940" [ref=e156]
+            - cell "2 647" [ref=e157]
+            - cell "2 941 h" [ref=e158]:
+              - generic [ref=e159]: 2 941 h
+          - row "14 Velaux 13880 8 941 2 941 h" [ref=e160]:
+            - cell "14" [ref=e161]
+            - cell "Velaux" [ref=e162]:
+              - link "Velaux" [ref=e163] [cursor=pointer]:
+                - /url: /commune/velaux-13
+            - cell "13880" [ref=e164]
+            - cell "8 941" [ref=e165]
+            - cell "2 941 h" [ref=e166]:
+              - generic [ref=e167]: 2 941 h
+          - row "15 Miramas 13140 26 203 2 940 h" [ref=e168]:
+            - cell "15" [ref=e169]
+            - cell "Miramas" [ref=e170]:
+              - link "Miramas" [ref=e171] [cursor=pointer]:
+                - /url: /commune/miramas-13
+            - cell "13140" [ref=e172]
+            - cell "26 203" [ref=e173]
+            - cell "2 940 h" [ref=e174]:
+              - generic [ref=e175]: 2 940 h
+          - row "16 Vauvenargues 13126 1 058 2 940 h" [ref=e176]:
+            - cell "16" [ref=e177]
+            - cell "Vauvenargues" [ref=e178]:
+              - link "Vauvenargues" [ref=e179] [cursor=pointer]:
+                - /url: /commune/vauvenargues-13
+            - cell "13126" [ref=e180]
+            - cell "1 058" [ref=e181]
+            - cell "2 940 h" [ref=e182]:
+              - generic [ref=e183]: 2 940 h
+          - row "17 Trets 13530 10 946 2 939 h" [ref=e184]:
+            - cell "17" [ref=e185]
+            - cell "Trets" [ref=e186]:
+              - link "Trets" [ref=e187] [cursor=pointer]:
+                - /url: /commune/trets-13
+            - cell "13530" [ref=e188]
+            - cell "10 946" [ref=e189]
+            - cell "2 939 h" [ref=e190]:
+              - generic [ref=e191]: 2 939 h
+          - row "18 Mimet 13105 4 241 2 939 h" [ref=e192]:
+            - cell "18" [ref=e193]
+            - cell "Mimet" [ref=e194]:
+              - link "Mimet" [ref=e195] [cursor=pointer]:
+                - /url: /commune/mimet-13
+            - cell "13105" [ref=e196]
+            - cell "4 241" [ref=e197]
+            - cell "2 939 h" [ref=e198]:
+              - generic [ref=e199]: 2 939 h
+          - row "19 Saint-Pierre-de-Mézoargues 13150 229 2 938 h" [ref=e200]:
+            - cell "19" [ref=e201]
+            - cell "Saint-Pierre-de-Mézoargues" [ref=e202]:
+              - link "Saint-Pierre-de-Mézoargues" [ref=e203] [cursor=pointer]:
+                - /url: /commune/saint-pierre-de-mezoargues-13
+            - cell "13150" [ref=e204]
+            - cell "229" [ref=e205]
+            - cell "2 938 h" [ref=e206]:
+              - generic [ref=e207]: 2 938 h
+          - row "20 Meyreuil 13590 6 747 2 937 h" [ref=e208]:
+            - cell "20" [ref=e209]
+            - cell "Meyreuil" [ref=e210]:
+              - link "Meyreuil" [ref=e211] [cursor=pointer]:
+                - /url: /commune/meyreuil-13
+            - cell "13590" [ref=e212]
+            - cell "6 747" [ref=e213]
+            - cell "2 937 h" [ref=e214]:
+              - generic [ref=e215]: 2 937 h
+          - row "21 Le Tholonet 13100 2 391 2 917 h" [ref=e216]:
+            - cell "21" [ref=e217]
+            - cell "Le Tholonet" [ref=e218]:
+              - link "Le Tholonet" [ref=e219] [cursor=pointer]:
+                - /url: /commune/le-tholonet-13
+            - cell "13100" [ref=e220]
+            - cell "2 391" [ref=e221]
+            - cell "2 917 h" [ref=e222]:
+              - generic [ref=e223]: 2 917 h
+          - row "22 Tarascon 13150 15 396 2 916 h" [ref=e224]:
+            - cell "22" [ref=e225]
+            - cell "Tarascon" [ref=e226]:
+              - link "Tarascon" [ref=e227] [cursor=pointer]:
+                - /url: /commune/tarascon-13
+            - cell "13150" [ref=e228]
+            - cell "15 396" [ref=e229]
+            - cell "2 916 h" [ref=e230]:
+              - generic [ref=e231]: 2 916 h
+          - row "23 Meyrargues 13650 3 847 2 915 h" [ref=e232]:
+            - cell "23" [ref=e233]
+            - cell "Meyrargues" [ref=e234]:
+              - link "Meyrargues" [ref=e235] [cursor=pointer]:
+                - /url: /commune/meyrargues-13
+            - cell "13650" [ref=e236]
+            - cell "3 847" [ref=e237]
+            - cell "2 915 h" [ref=e238]:
+              - generic [ref=e239]: 2 915 h
+          - row "24 Simiane-Collongue 13109 5 780 2 915 h" [ref=e240]:
+            - cell "24" [ref=e241]
+            - cell "Simiane-Collongue" [ref=e242]:
+              - link "Simiane-Collongue" [ref=e243] [cursor=pointer]:
+                - /url: /commune/simiane-collongue-13
+            - cell "13109" [ref=e244]
+            - cell "5 780" [ref=e245]
+            - cell "2 915 h" [ref=e246]:
+              - generic [ref=e247]: 2 915 h
+          - row "25 Maussane-les-Alpilles 13520 2 347 2 914 h" [ref=e248]:
+            - cell "25" [ref=e249]
+            - cell "Maussane-les-Alpilles" [ref=e250]:
+              - link "Maussane-les-Alpilles" [ref=e251] [cursor=pointer]:
+                - /url: /commune/maussane-les-alpilles-13
+            - cell "13520" [ref=e252]
+            - cell "2 347" [ref=e253]
+            - cell "2 914 h" [ref=e254]:
+              - generic [ref=e255]: 2 914 h
+          - row "26 Septèmes-les-Vallons 13240 11 995 2 914 h" [ref=e256]:
+            - cell "26" [ref=e257]
+            - cell "Septèmes-les-Vallons" [ref=e258]:
+              - link "Septèmes-les-Vallons" [ref=e259] [cursor=pointer]:
+                - /url: /commune/septemes-les-vallons-13
+            - cell "13240" [ref=e260]
+            - cell "11 995" [ref=e261]
+            - cell "2 914 h" [ref=e262]:
+              - generic [ref=e263]: 2 914 h
+          - row "27 Mas-Blanc-des-Alpilles 13103 564 2 913 h" [ref=e264]:
+            - cell "27" [ref=e265]
+            - cell "Mas-Blanc-des-Alpilles" [ref=e266]:
+              - link "Mas-Blanc-des-Alpilles" [ref=e267] [cursor=pointer]:
+                - /url: /commune/mas-blanc-des-alpilles-13
+            - cell "13103" [ref=e268]
+            - cell "564" [ref=e269]
+            - cell "2 913 h" [ref=e270]:
+              - generic [ref=e271]: 2 913 h
+          - row "28 Sénas 13560 6 925 2 913 h" [ref=e272]:
+            - cell "28" [ref=e273]
+            - cell "Sénas" [ref=e274]:
+              - link "Sénas" [ref=e275] [cursor=pointer]:
+                - /url: /commune/senas-13
+            - cell "13560" [ref=e276]
+            - cell "6 925" [ref=e277]
+            - cell "2 913 h" [ref=e278]:
+              - generic [ref=e279]: 2 913 h
+          - row "29 Sausset-les-Pins 13960 7 574 2 912 h" [ref=e280]:
+            - cell "29" [ref=e281]
+            - cell "Sausset-les-Pins" [ref=e282]:
+              - link "Sausset-les-Pins" [ref=e283] [cursor=pointer]:
+                - /url: /commune/sausset-les-pins-13
+            - cell "13960" [ref=e284]
+            - cell "7 574" [ref=e285]
+            - cell "2 912 h" [ref=e286]:
+              - generic [ref=e287]: 2 912 h
+          - row "30 Martigues 13117 48 298 2 912 h" [ref=e288]:
+            - cell "30" [ref=e289]
+            - cell "Martigues" [ref=e290]:
+              - link "Martigues" [ref=e291] [cursor=pointer]:
+                - /url: /commune/martigues-13
+            - cell "13117" [ref=e292]
+            - cell "48 298" [ref=e293]
+            - cell "2 912 h" [ref=e294]:
+              - generic [ref=e295]: 2 912 h
+          - row "31 Salon-de-Provence 13300 44 194 2 911 h" [ref=e296]:
+            - cell "31" [ref=e297]
+            - cell "Salon-de-Provence" [ref=e298]:
+              - link "Salon-de-Provence" [ref=e299] [cursor=pointer]:
+                - /url: /commune/salon-de-provence-13
+            - cell "13300" [ref=e300]
+            - cell "44 194" [ref=e301]
+            - cell "2 911 h" [ref=e302]:
+              - generic [ref=e303]: 2 911 h
+          - row "32 Marseille 13001 886 040 2 911 h" [ref=e304]:
+            - cell "32" [ref=e305]
+            - cell "Marseille" [ref=e306]:
+              - link "Marseille" [ref=e307] [cursor=pointer]:
+                - /url: /commune/marseille-13
+            - cell "13001" [ref=e308]
+            - cell "886 040" [ref=e309]
+            - cell "2 911 h" [ref=e310]:
+              - generic [ref=e311]: 2 911 h
+          - row "33 Saint-Victoret 13730 6 730 2 910 h" [ref=e312]:
+            - cell "33" [ref=e313]
+            - cell "Saint-Victoret" [ref=e314]:
+              - link "Saint-Victoret" [ref=e315] [cursor=pointer]:
+                - /url: /commune/saint-victoret-13
+            - cell "13730" [ref=e316]
+            - cell "6 730" [ref=e317]
+            - cell "2 910 h" [ref=e318]:
+              - generic [ref=e319]: 2 910 h
+          - row "34 Marignane 13700 33 692 2 910 h" [ref=e320]:
+            - cell "34" [ref=e321]
+            - cell "Marignane" [ref=e322]:
+              - link "Marignane" [ref=e323] [cursor=pointer]:
+                - /url: /commune/marignane-13
+            - cell "13700" [ref=e324]
+            - cell "33 692" [ref=e325]
+            - cell "2 910 h" [ref=e326]:
+              - generic [ref=e327]: 2 910 h
+          - row "35 Saint-Savournin 13119 3 397 2 909 h" [ref=e328]:
+            - cell "35" [ref=e329]
+            - cell "Saint-Savournin" [ref=e330]:
+              - link "Saint-Savournin" [ref=e331] [cursor=pointer]:
+                - /url: /commune/saint-savournin-13
+            - cell "13119" [ref=e332]
+            - cell "3 397" [ref=e333]
+            - cell "2 909 h" [ref=e334]:
+              - generic [ref=e335]: 2 909 h
+          - row "36 Mallemort 13370 6 166 2 909 h" [ref=e336]:
+            - cell "36" [ref=e337]
+            - cell "Mallemort" [ref=e338]:
+              - link "Mallemort" [ref=e339] [cursor=pointer]:
+                - /url: /commune/mallemort-13
+            - cell "13370" [ref=e340]
+            - cell "6 166" [ref=e341]
+            - cell "2 909 h" [ref=e342]:
+              - generic [ref=e343]: 2 909 h
+          - row "37 Maillane 13910 2 775 2 908 h" [ref=e344]:
+            - cell "37" [ref=e345]
+            - cell "Maillane" [ref=e346]:
+              - link "Maillane" [ref=e347] [cursor=pointer]:
+                - /url: /commune/maillane-13
+            - cell "13910" [ref=e348]
+            - cell "2 775" [ref=e349]
+            - cell "2 908 h" [ref=e350]:
+              - generic [ref=e351]: 2 908 h
+          - row "38 Saint-Rémy-de-Provence 13210 9 599 2 908 h" [ref=e352]:
+            - cell "38" [ref=e353]
+            - cell "Saint-Rémy-de-Provence" [ref=e354]:
+              - link "Saint-Rémy-de-Provence" [ref=e355] [cursor=pointer]:
+                - /url: /commune/saint-remy-de-provence-13
+            - cell "13210" [ref=e356]
+            - cell "9 599" [ref=e357]
+            - cell "2 908 h" [ref=e358]:
+              - generic [ref=e359]: 2 908 h
+          - row "39 Lançon-Provence 13680 9 915 2 907 h" [ref=e360]:
+            - cell "39" [ref=e361]
+            - cell "Lançon-Provence" [ref=e362]:
+              - link "Lançon-Provence" [ref=e363] [cursor=pointer]:
+                - /url: /commune/lancon-provence-13
+            - cell "13680" [ref=e364]
+            - cell "9 915" [ref=e365]
+            - cell "2 907 h" [ref=e366]:
+              - generic [ref=e367]: 2 907 h
+          - row "40 Lambesc 13410 10 024 2 906 h" [ref=e368]:
+            - cell "40" [ref=e369]
+            - cell "Lambesc" [ref=e370]:
+              - link "Lambesc" [ref=e371] [cursor=pointer]:
+                - /url: /commune/lambesc-13
+            - cell "13410" [ref=e372]
+            - cell "10 024" [ref=e373]
+            - cell "2 906 h" [ref=e374]:
+              - generic [ref=e375]: 2 906 h
+          - row "41 Lamanon 13113 2 097 2 884 h" [ref=e376]:
+            - cell "41" [ref=e377]
+            - cell "Lamanon" [ref=e378]:
+              - link "Lamanon" [ref=e379] [cursor=pointer]:
+                - /url: /commune/lamanon-13
+            - cell "13113" [ref=e380]
+            - cell "2 097" [ref=e381]
+            - cell "2 884 h" [ref=e382]:
+              - generic [ref=e383]: 2 884 h
+          - row "42 Jouques 13490 4 547 2 883 h" [ref=e384]:
+            - cell "42" [ref=e385]
+            - cell "Jouques" [ref=e386]:
+              - link "Jouques" [ref=e387] [cursor=pointer]:
+                - /url: /commune/jouques-13
+            - cell "13490" [ref=e388]
+            - cell "4 547" [ref=e389]
+            - cell "2 883 h" [ref=e390]:
+              - generic [ref=e391]: 2 883 h
+          - row "43 Istres 13118 44 292 2 882 h" [ref=e392]:
+            - cell "43" [ref=e393]
+            - cell "Istres" [ref=e394]:
+              - link "Istres" [ref=e395] [cursor=pointer]:
+                - /url: /commune/istres-13
+            - cell "13118" [ref=e396]
+            - cell "44 292" [ref=e397]
+            - cell "2 882 h" [ref=e398]:
+              - generic [ref=e399]: 2 882 h
+          - row "44 Gréasque 13850 4 554 2 881 h" [ref=e400]:
+            - cell "44" [ref=e401]
+            - cell "Gréasque" [ref=e402]:
+              - link "Gréasque" [ref=e403] [cursor=pointer]:
+                - /url: /commune/greasque-13
+            - cell "13850" [ref=e404]
+            - cell "4 554" [ref=e405]
+            - cell "2 881 h" [ref=e406]:
+              - generic [ref=e407]: 2 881 h
+          - row "45 Graveson 13690 4 698 2 880 h" [ref=e408]:
+            - cell "45" [ref=e409]
+            - cell "Graveson" [ref=e410]:
+              - link "Graveson" [ref=e411] [cursor=pointer]:
+                - /url: /commune/graveson-13
+            - cell "13690" [ref=e412]
+            - cell "4 698" [ref=e413]
+            - cell "2 880 h" [ref=e414]:
+              - generic [ref=e415]: 2 880 h
+          - row "46 Grans 13450 5 489 2 879 h" [ref=e416]:
+            - cell "46" [ref=e417]
+            - cell "Grans" [ref=e418]:
+              - link "Grans" [ref=e419] [cursor=pointer]:
+                - /url: /commune/grans-13
+            - cell "13450" [ref=e420]
+            - cell "5 489" [ref=e421]
+            - cell "2 879 h" [ref=e422]:
+              - generic [ref=e423]: 2 879 h
+          - row "47 Gignac-la-Nerthe 13180 10 343 2 878 h" [ref=e424]:
+            - cell "47" [ref=e425]
+            - cell "Gignac-la-Nerthe" [ref=e426]:
+              - link "Gignac-la-Nerthe" [ref=e427] [cursor=pointer]:
+                - /url: /commune/gignac-la-nerthe-13
+            - cell "13180" [ref=e428]
+            - cell "10 343" [ref=e429]
+            - cell "2 878 h" [ref=e430]:
+              - generic [ref=e431]: 2 878 h
+          - row "48 Gémenos 13420 6 579 2 877 h" [ref=e432]:
+            - cell "48" [ref=e433]
+            - cell "Gémenos" [ref=e434]:
+              - link "Gémenos" [ref=e435] [cursor=pointer]:
+                - /url: /commune/gemenos-13
+            - cell "13420" [ref=e436]
+            - cell "6 579" [ref=e437]
+            - cell "2 877 h" [ref=e438]:
+              - generic [ref=e439]: 2 877 h
+          - row "49 Gardanne 13120 21 597 2 876 h" [ref=e440]:
+            - cell "49" [ref=e441]
+            - cell "Gardanne" [ref=e442]:
+              - link "Gardanne" [ref=e443] [cursor=pointer]:
+                - /url: /commune/gardanne-13
+            - cell "13120" [ref=e444]
+            - cell "21 597" [ref=e445]
+            - cell "2 876 h" [ref=e446]:
+              - generic [ref=e447]: 2 876 h
+          - row "50 Fuveau 13710 10 337 2 875 h" [ref=e448]:
+            - cell "50" [ref=e449]
+            - cell "Fuveau" [ref=e450]:
+              - link "Fuveau" [ref=e451] [cursor=pointer]:
+                - /url: /commune/fuveau-13
+            - cell "13710" [ref=e452]
+            - cell "10 337" [ref=e453]
+            - cell "2 875 h" [ref=e454]:
+              - generic [ref=e455]: 2 875 h
+          - row "51 Fos-sur-Mer 13270 15 862 2 853 h" [ref=e456]:
+            - cell "51" [ref=e457]
+            - cell "Fos-sur-Mer" [ref=e458]:
+              - link "Fos-sur-Mer" [ref=e459] [cursor=pointer]:
+                - /url: /commune/fos-sur-mer-13
+            - cell "13270" [ref=e460]
+            - cell "15 862" [ref=e461]
+            - cell "2 853 h" [ref=e462]:
+              - generic [ref=e463]: 2 853 h
+          - row "52 Fontvieille 13990 3 571 2 852 h" [ref=e464]:
+            - cell "52" [ref=e465]
+            - cell "Fontvieille" [ref=e466]:
+              - link "Fontvieille" [ref=e467] [cursor=pointer]:
+                - /url: /commune/fontvieille-13
+            - cell "13990" [ref=e468]
+            - cell "3 571" [ref=e469]
+            - cell "2 852 h" [ref=e470]:
+              - generic [ref=e471]: 2 852 h
+          - row "53 La Fare-les-Oliviers 13580 9 039 2 851 h" [ref=e472]:
+            - cell "53" [ref=e473]
+            - cell "La Fare-les-Oliviers" [ref=e474]:
+              - link "La Fare-les-Oliviers" [ref=e475] [cursor=pointer]:
+                - /url: /commune/la-fare-les-oliviers-13
+            - cell "13580" [ref=e476]
+            - cell "9 039" [ref=e477]
+            - cell "2 851 h" [ref=e478]:
+              - generic [ref=e479]: 2 851 h
+          - row "54 Eyragues 13630 4 298 2 850 h" [ref=e480]:
+            - cell "54" [ref=e481]
+            - cell "Eyragues" [ref=e482]:
+              - link "Eyragues" [ref=e483] [cursor=pointer]:
+                - /url: /commune/eyragues-13
+            - cell "13630" [ref=e484]
+            - cell "4 298" [ref=e485]
+            - cell "2 850 h" [ref=e486]:
+              - generic [ref=e487]: 2 850 h
+          - row "55 Eyguières 13430 7 119 2 849 h" [ref=e488]:
+            - cell "55" [ref=e489]
+            - cell "Eyguières" [ref=e490]:
+              - link "Eyguières" [ref=e491] [cursor=pointer]:
+                - /url: /commune/eyguieres-13
+            - cell "13430" [ref=e492]
+            - cell "7 119" [ref=e493]
+            - cell "2 849 h" [ref=e494]:
+              - generic [ref=e495]: 2 849 h
+          - row "56 Eygalières 13810 1 773 2 848 h" [ref=e496]:
+            - cell "56" [ref=e497]
+            - cell "Eygalières" [ref=e498]:
+              - link "Eygalières" [ref=e499] [cursor=pointer]:
+                - /url: /commune/eygalieres-13
+            - cell "13810" [ref=e500]
+            - cell "1 773" [ref=e501]
+            - cell "2 848 h" [ref=e502]:
+              - generic [ref=e503]: 2 848 h
+          - row "57 Ensuès-la-Redonne 13820 5 757 2 847 h" [ref=e504]:
+            - cell "57" [ref=e505]
+            - cell "Ensuès-la-Redonne" [ref=e506]:
+              - link "Ensuès-la-Redonne" [ref=e507] [cursor=pointer]:
+                - /url: /commune/ensues-la-redonne-13
+            - cell "13820" [ref=e508]
+            - cell "5 757" [ref=e509]
+            - cell "2 847 h" [ref=e510]:
+              - generic [ref=e511]: 2 847 h
+          - row "58 Éguilles 13510 8 479 2 846 h" [ref=e512]:
+            - cell "58" [ref=e513]
+            - cell "Éguilles" [ref=e514]:
+              - link "Éguilles" [ref=e515] [cursor=pointer]:
+                - /url: /commune/eguilles-13
+            - cell "13510" [ref=e516]
+            - cell "8 479" [ref=e517]
+            - cell "2 846 h" [ref=e518]:
+              - generic [ref=e519]: 2 846 h
+          - row "59 La Destrousse 13112 4 133 2 845 h" [ref=e520]:
+            - cell "59" [ref=e521]
+            - cell "La Destrousse" [ref=e522]:
+              - link "La Destrousse" [ref=e523] [cursor=pointer]:
+                - /url: /commune/la-destrousse-13
+            - cell "13112" [ref=e524]
+            - cell "4 133" [ref=e525]
+            - cell "2 845 h" [ref=e526]:
+              - generic [ref=e527]: 2 845 h
+          - row "60 Cuges-les-Pins 13780 6 236 2 844 h" [ref=e528]:
+            - cell "60" [ref=e529]
+            - cell "Cuges-les-Pins" [ref=e530]:
+              - link "Cuges-les-Pins" [ref=e531] [cursor=pointer]:
+                - /url: /commune/cuges-les-pins-13
+            - cell "13780" [ref=e532]
+            - cell "6 236" [ref=e533]
+            - cell "2 844 h" [ref=e534]:
+              - generic [ref=e535]: 2 844 h
+          - row "61 Saint-Paul-lès-Durance 13115 885 2 838 h" [ref=e536]:
+            - cell "61" [ref=e537]
+            - cell "Saint-Paul-lès-Durance" [ref=e538]:
+              - link "Saint-Paul-lès-Durance" [ref=e539] [cursor=pointer]:
+                - /url: /commune/saint-paul-les-durance-13
+            - cell "13115" [ref=e540]
+            - cell "885" [ref=e541]
+            - cell "2 838 h" [ref=e542]:
+              - generic [ref=e543]: 2 838 h
+          - row "62 Saint-Mitre-les-Remparts 13920 6 175 2 837 h" [ref=e544]:
+            - cell "62" [ref=e545]
+            - cell "Saint-Mitre-les-Remparts" [ref=e546]:
+              - link "Saint-Mitre-les-Remparts" [ref=e547] [cursor=pointer]:
+                - /url: /commune/saint-mitre-les-remparts-13
+            - cell "13920" [ref=e548]
+            - cell "6 175" [ref=e549]
+            - cell "2 837 h" [ref=e550]:
+              - generic [ref=e551]: 2 837 h
+          - row "63 Saint-Martin-de-Crau 13310 14 145 2 836 h" [ref=e552]:
+            - cell "63" [ref=e553]
+            - cell "Saint-Martin-de-Crau" [ref=e554]:
+              - link "Saint-Martin-de-Crau" [ref=e555] [cursor=pointer]:
+                - /url: /commune/saint-martin-de-crau-13
+            - cell "13310" [ref=e556]
+            - cell "14 145" [ref=e557]
+            - cell "2 836 h" [ref=e558]:
+              - generic [ref=e559]: 2 836 h
+          - row "64 Saintes-Maries-de-la-Mer 13460 2 433 2 835 h" [ref=e560]:
+            - cell "64" [ref=e561]
+            - cell "Saintes-Maries-de-la-Mer" [ref=e562]:
+              - link "Saintes-Maries-de-la-Mer" [ref=e563] [cursor=pointer]:
+                - /url: /commune/saintes-maries-de-la-mer-13
+            - cell "13460" [ref=e564]
+            - cell "2 433" [ref=e565]
+            - cell "2 835 h" [ref=e566]:
+              - generic [ref=e567]: 2 835 h
+          - row "65 Saint-Marc-Jaumegarde 13100 1 273 2 834 h" [ref=e568]:
+            - cell "65" [ref=e569]
+            - cell "Saint-Marc-Jaumegarde" [ref=e570]:
+              - link "Saint-Marc-Jaumegarde" [ref=e571] [cursor=pointer]:
+                - /url: /commune/saint-marc-jaumegarde-13
+            - cell "13100" [ref=e572]
+            - cell "1 273" [ref=e573]
+            - cell "2 834 h" [ref=e574]:
+              - generic [ref=e575]: 2 834 h
+          - row "66 Saint-Étienne-du-Grès 13103 2 489 2 833 h" [ref=e576]:
+            - cell "66" [ref=e577]
+            - cell "Saint-Étienne-du-Grès" [ref=e578]:
+              - link "Saint-Étienne-du-Grès" [ref=e579] [cursor=pointer]:
+                - /url: /commune/saint-etienne-du-gres-13
+            - cell "13103" [ref=e580]
+            - cell "2 489" [ref=e581]
+            - cell "2 833 h" [ref=e582]:
+              - generic [ref=e583]: 2 833 h
+          - row "67 Saint-Estève-Janson 13610 357 2 832 h" [ref=e584]:
+            - cell "67" [ref=e585]
+            - cell "Saint-Estève-Janson" [ref=e586]:
+              - link "Saint-Estève-Janson" [ref=e587] [cursor=pointer]:
+                - /url: /commune/saint-esteve-janson-13
+            - cell "13610" [ref=e588]
+            - cell "357" [ref=e589]
+            - cell "2 832 h" [ref=e590]:
+              - generic [ref=e591]: 2 832 h
+          - row "68 Saint-Chamas 13250 8 676 2 831 h" [ref=e592]:
+            - cell "68" [ref=e593]
+            - cell "Saint-Chamas" [ref=e594]:
+              - link "Saint-Chamas" [ref=e595] [cursor=pointer]:
+                - /url: /commune/saint-chamas-13
+            - cell "13250" [ref=e596]
+            - cell "8 676" [ref=e597]
+            - cell "2 831 h" [ref=e598]:
+              - generic [ref=e599]: 2 831 h
+          - row "69 Saint-Cannat 13760 6 097 2 830 h" [ref=e600]:
+            - cell "69" [ref=e601]
+            - cell "Saint-Cannat" [ref=e602]:
+              - link "Saint-Cannat" [ref=e603] [cursor=pointer]:
+                - /url: /commune/saint-cannat-13
+            - cell "13760" [ref=e604]
+            - cell "6 097" [ref=e605]
+            - cell "2 830 h" [ref=e606]:
+              - generic [ref=e607]: 2 830 h
+          - row "70 Saint-Antonin-sur-Bayon 13100 126 2 829 h" [ref=e608]:
+            - cell "70" [ref=e609]
+            - cell "Saint-Antonin-sur-Bayon" [ref=e610]:
+              - link "Saint-Antonin-sur-Bayon" [ref=e611] [cursor=pointer]:
+                - /url: /commune/saint-antonin-sur-bayon-13
+            - cell "13100" [ref=e612]
+            - cell "126" [ref=e613]
+            - cell "2 829 h" [ref=e614]:
+              - generic [ref=e615]: 2 829 h
+          - row "71 Cornillon-Confoux 13250 1 667 2 822 h" [ref=e616]:
+            - cell "71" [ref=e617]
+            - cell "Cornillon-Confoux" [ref=e618]:
+              - link "Cornillon-Confoux" [ref=e619] [cursor=pointer]:
+                - /url: /commune/cornillon-confoux-13
+            - cell "13250" [ref=e620]
+            - cell "1 667" [ref=e621]
+            - cell "2 822 h" [ref=e622]:
+              - generic [ref=e623]: 2 822 h
+          - row "72 La Ciotat 13600 38 477 2 821 h" [ref=e624]:
+            - cell "72" [ref=e625]
+            - cell "La Ciotat" [ref=e626]:
+              - link "La Ciotat" [ref=e627] [cursor=pointer]:
+                - /url: /commune/la-ciotat-13
+            - cell "13600" [ref=e628]
+            - cell "38 477" [ref=e629]
+            - cell "2 821 h" [ref=e630]:
+              - generic [ref=e631]: 2 821 h
+          - row "73 Châteaurenard 13160 16 545 2 820 h" [ref=e632]:
+            - cell "73" [ref=e633]
+            - cell "Châteaurenard" [ref=e634]:
+              - link "Châteaurenard" [ref=e635] [cursor=pointer]:
+                - /url: /commune/chateaurenard-13
+            - cell "13160" [ref=e636]
+            - cell "16 545" [ref=e637]
+            - cell "2 820 h" [ref=e638]:
+              - generic [ref=e639]: 2 820 h
+          - row "74 Châteauneuf-les-Martigues 13220 18 455 2 819 h" [ref=e640]:
+            - cell "74" [ref=e641]
+            - cell "Châteauneuf-les-Martigues" [ref=e642]:
+              - link "Châteauneuf-les-Martigues" [ref=e643] [cursor=pointer]:
+                - /url: /commune/chateauneuf-les-martigues-13
+            - cell "13220" [ref=e644]
+            - cell "18 455" [ref=e645]
+            - cell "2 819 h" [ref=e646]:
+              - generic [ref=e647]: 2 819 h
+          - row "75 Châteauneuf-le-Rouge 13790 2 376 2 818 h" [ref=e648]:
+            - cell "75" [ref=e649]
+            - cell "Châteauneuf-le-Rouge" [ref=e650]:
+              - link "Châteauneuf-le-Rouge" [ref=e651] [cursor=pointer]:
+                - /url: /commune/chateauneuf-le-rouge-13
+            - cell "13790" [ref=e652]
+            - cell "2 376" [ref=e653]
+            - cell "2 818 h" [ref=e654]:
+              - generic [ref=e655]: 2 818 h
+          - row "76 Charleval 13350 2 640 2 817 h" [ref=e656]:
+            - cell "76" [ref=e657]
+            - cell "Charleval" [ref=e658]:
+              - link "Charleval" [ref=e659] [cursor=pointer]:
+                - /url: /commune/charleval-13
+            - cell "13350" [ref=e660]
+            - cell "2 640" [ref=e661]
+            - cell "2 817 h" [ref=e662]:
+              - generic [ref=e663]: 2 817 h
+          - row "77 Ceyreste 13600 4 863 2 816 h" [ref=e664]:
+            - cell "77" [ref=e665]
+            - cell "Ceyreste" [ref=e666]:
+              - link "Ceyreste" [ref=e667] [cursor=pointer]:
+                - /url: /commune/ceyreste-13
+            - cell "13600" [ref=e668]
+            - cell "4 863" [ref=e669]
+            - cell "2 816 h" [ref=e670]:
+              - generic [ref=e671]: 2 816 h
+          - row "78 Cassis 13260 6 661 2 815 h" [ref=e672]:
+            - cell "78" [ref=e673]
+            - cell "Cassis" [ref=e674]:
+              - link "Cassis" [ref=e675] [cursor=pointer]:
+                - /url: /commune/cassis-13
+            - cell "13260" [ref=e676]
+            - cell "6 661" [ref=e677]
+            - cell "2 815 h" [ref=e678]:
+              - generic [ref=e679]: 2 815 h
+          - row "79 Carry-le-Rouet 13620 5 702 2 814 h" [ref=e680]:
+            - cell "79" [ref=e681]
+            - cell "Carry-le-Rouet" [ref=e682]:
+              - link "Carry-le-Rouet" [ref=e683] [cursor=pointer]:
+                - /url: /commune/carry-le-rouet-13
+            - cell "13620" [ref=e684]
+            - cell "5 702" [ref=e685]
+            - cell "2 814 h" [ref=e686]:
+              - generic [ref=e687]: 2 814 h
+          - row "80 Cadolive 13950 2 236 2 813 h" [ref=e688]:
+            - cell "80" [ref=e689]
+            - cell "Cadolive" [ref=e690]:
+              - link "Cadolive" [ref=e691] [cursor=pointer]:
+                - /url: /commune/cadolive-13
+            - cell "13950" [ref=e692]
+            - cell "2 236" [ref=e693]
+            - cell "2 813 h" [ref=e694]:
+              - generic [ref=e695]: 2 813 h
+          - row "81 Saint-Andiol 13670 3 353 2 807 h" [ref=e696]:
+            - cell "81" [ref=e697]
+            - cell "Saint-Andiol" [ref=e698]:
+              - link "Saint-Andiol" [ref=e699] [cursor=pointer]:
+                - /url: /commune/saint-andiol-13
+            - cell "13670" [ref=e700]
+            - cell "3 353" [ref=e701]
+            - cell "2 807 h" [ref=e702]:
+              - generic [ref=e703]: 2 807 h
+          - row "82 Le Rove 13740 5 246 2 806 h" [ref=e704]:
+            - cell "82" [ref=e705]
+            - cell "Le Rove" [ref=e706]:
+              - link "Le Rove" [ref=e707] [cursor=pointer]:
+                - /url: /commune/le-rove-13
+            - cell "13740" [ref=e708]
+            - cell "5 246" [ref=e709]
+            - cell "2 806 h" [ref=e710]:
+              - generic [ref=e711]: 2 806 h
+          - row "83 Rousset 13790 5 425 2 805 h" [ref=e712]:
+            - cell "83" [ref=e713]
+            - cell "Rousset" [ref=e714]:
+              - link "Rousset" [ref=e715] [cursor=pointer]:
+                - /url: /commune/rousset-13
+            - cell "13790" [ref=e716]
+            - cell "5 425" [ref=e717]
+            - cell "2 805 h" [ref=e718]:
+              - generic [ref=e719]: 2 805 h
+          - row "84 Roquevaire 13360 8 915 2 804 h" [ref=e720]:
+            - cell "84" [ref=e721]
+            - cell "Roquevaire" [ref=e722]:
+              - link "Roquevaire" [ref=e723] [cursor=pointer]:
+                - /url: /commune/roquevaire-13
+            - cell "13360" [ref=e724]
+            - cell "8 915" [ref=e725]
+            - cell "2 804 h" [ref=e726]:
+              - generic [ref=e727]: 2 804 h
+          - row "85 Roquefort-la-Bédoule 13830 5 798 2 803 h" [ref=e728]:
+            - cell "85" [ref=e729]
+            - cell "Roquefort-la-Bédoule" [ref=e730]:
+              - link "Roquefort-la-Bédoule" [ref=e731] [cursor=pointer]:
+                - /url: /commune/roquefort-la-bedoule-13
+            - cell "13830" [ref=e732]
+            - cell "5 798" [ref=e733]
+            - cell "2 803 h" [ref=e734]:
+              - generic [ref=e735]: 2 803 h
+          - row "86 La Roque-d'Anthéron 13640 5 459 2 802 h" [ref=e736]:
+            - cell "86" [ref=e737]
+            - cell "La Roque-d'Anthéron" [ref=e738]:
+              - link "La Roque-d'Anthéron" [ref=e739] [cursor=pointer]:
+                - /url: /commune/la-roque-d-antheron-13
+            - cell "13640" [ref=e740]
+            - cell "5 459" [ref=e741]
+            - cell "2 802 h" [ref=e742]:
+              - generic [ref=e743]: 2 802 h
+          - row "87 Rognonas 13870 4 261 2 801 h" [ref=e744]:
+            - cell "87" [ref=e745]
+            - cell "Rognonas" [ref=e746]:
+              - link "Rognonas" [ref=e747] [cursor=pointer]:
+                - /url: /commune/rognonas-13
+            - cell "13870" [ref=e748]
+            - cell "4 261" [ref=e749]
+            - cell "2 801 h" [ref=e750]:
+              - generic [ref=e751]: 2 801 h
+          - row "88 Rognes 13840 4 693 2 800 h" [ref=e752]:
+            - cell "88" [ref=e753]
+            - cell "Rognes" [ref=e754]:
+              - link "Rognes" [ref=e755] [cursor=pointer]:
+                - /url: /commune/rognes-13
+            - cell "13840" [ref=e756]
+            - cell "4 693" [ref=e757]
+            - cell "2 800 h" [ref=e758]:
+              - generic [ref=e759]: 2 800 h
+          - row "89 Rognac 13340 12 576 2 799 h" [ref=e760]:
+            - cell "89" [ref=e761]
+            - cell "Rognac" [ref=e762]:
+              - link "Rognac" [ref=e763] [cursor=pointer]:
+                - /url: /commune/rognac-13
+            - cell "13340" [ref=e764]
+            - cell "12 576" [ref=e765]
+            - cell "2 799 h" [ref=e766]:
+              - generic [ref=e767]: 2 799 h
+          - row "90 Le Puy-Sainte-Réparade 13610 5 935 2 798 h" [ref=e768]:
+            - cell "90" [ref=e769]
+            - cell "Le Puy-Sainte-Réparade" [ref=e770]:
+              - link "Le Puy-Sainte-Réparade" [ref=e771] [cursor=pointer]:
+                - /url: /commune/le-puy-sainte-reparade-13
+            - cell "13610" [ref=e772]
+            - cell "5 935" [ref=e773]
+            - cell "2 798 h" [ref=e774]:
+              - generic [ref=e775]: 2 798 h
+          - row "91 Cabriès 13480 10 240 2 791 h" [ref=e776]:
+            - cell "91" [ref=e777]
+            - cell "Cabriès" [ref=e778]:
+              - link "Cabriès" [ref=e779] [cursor=pointer]:
+                - /url: /commune/cabries-13
+            - cell "13480" [ref=e780]
+            - cell "10 240" [ref=e781]
+            - cell "2 791 h" [ref=e782]:
+              - generic [ref=e783]: 2 791 h
+          - row "92 Cabannes 13440 4 595 2 790 h" [ref=e784]:
+            - cell "92" [ref=e785]
+            - cell "Cabannes" [ref=e786]:
+              - link "Cabannes" [ref=e787] [cursor=pointer]:
+                - /url: /commune/cabannes-13
+            - cell "13440" [ref=e788]
+            - cell "4 595" [ref=e789]
+            - cell "2 790 h" [ref=e790]:
+              - generic [ref=e791]: 2 790 h
+          - row "93 Boulbon 13150 1 543 2 789 h" [ref=e792]:
+            - cell "93" [ref=e793]
+            - cell "Boulbon" [ref=e794]:
+              - link "Boulbon" [ref=e795] [cursor=pointer]:
+                - /url: /commune/boulbon-13
+            - cell "13150" [ref=e796]
+            - cell "1 543" [ref=e797]
+            - cell "2 789 h" [ref=e798]:
+              - generic [ref=e799]: 2 789 h
+          - row "94 La Bouilladisse 13720 6 547 2 788 h" [ref=e800]:
+            - cell "94" [ref=e801]
+            - cell "La Bouilladisse" [ref=e802]:
+              - link "La Bouilladisse" [ref=e803] [cursor=pointer]:
+                - /url: /commune/la-bouilladisse-13
+            - cell "13720" [ref=e804]
+            - cell "6 547" [ref=e805]
+            - cell "2 788 h" [ref=e806]:
+              - generic [ref=e807]: 2 788 h
+          - row "95 Bouc-Bel-Air 13320 15 381 2 787 h" [ref=e808]:
+            - cell "95" [ref=e809]
+            - cell "Bouc-Bel-Air" [ref=e810]:
+              - link "Bouc-Bel-Air" [ref=e811] [cursor=pointer]:
+                - /url: /commune/bouc-bel-air-13
+            - cell "13320" [ref=e812]
+            - cell "15 381" [ref=e813]
+            - cell "2 787 h" [ref=e814]:
+              - generic [ref=e815]: 2 787 h
+          - row "96 Berre-l'Étang 13130 13 832 2 786 h" [ref=e816]:
+            - cell "96" [ref=e817]
+            - cell "Berre-l'Étang" [ref=e818]:
+              - link "Berre-l'Étang" [ref=e819] [cursor=pointer]:
+                - /url: /commune/berre-l-etang-13
+            - cell "13130" [ref=e820]
+            - cell "13 832" [ref=e821]
+            - cell "2 786 h" [ref=e822]:
+              - generic [ref=e823]: 2 786 h
+          - row "97 Belcodène 13720 2 009 2 785 h" [ref=e824]:
+            - cell "97" [ref=e825]
+            - cell "Belcodène" [ref=e826]:
+              - link "Belcodène" [ref=e827] [cursor=pointer]:
+                - /url: /commune/belcodene-13
+            - cell "13720" [ref=e828]
+            - cell "2 009" [ref=e829]
+            - cell "2 785 h" [ref=e830]:
+              - generic [ref=e831]: 2 785 h
+          - row "98 Beaurecueil 13100 585 2 784 h" [ref=e832]:
+            - cell "98" [ref=e833]
+            - cell "Beaurecueil" [ref=e834]:
+              - link "Beaurecueil" [ref=e835] [cursor=pointer]:
+                - /url: /commune/beaurecueil-13
+            - cell "13100" [ref=e836]
+            - cell "585" [ref=e837]
+            - cell "2 784 h" [ref=e838]:
+              - generic [ref=e839]: 2 784 h
+          - row "99 Les Baux-de-Provence 13520 264 2 783 h" [ref=e840]:
+            - cell "99" [ref=e841]
+            - cell "Les Baux-de-Provence" [ref=e842]:
+              - link "Les Baux-de-Provence" [ref=e843] [cursor=pointer]:
+                - /url: /commune/les-baux-de-provence-13
+            - cell "13520" [ref=e844]
+            - cell "264" [ref=e845]
+            - cell "2 783 h" [ref=e846]:
+              - generic [ref=e847]: 2 783 h
+          - row "100 Barbentane 13570 4 266 2 782 h" [ref=e848]:
+            - cell "100" [ref=e849]
+            - cell "Barbentane" [ref=e850]:
+              - link "Barbentane" [ref=e851] [cursor=pointer]:
+                - /url: /commune/barbentane-13
+            - cell "13570" [ref=e852]
+            - cell "4 266" [ref=e853]
+            - cell "2 782 h" [ref=e854]:
+              - generic [ref=e855]: 2 782 h
+          - row "101 Puyloubier 13114 1 768 2 776 h" [ref=e856]:
+            - cell "101" [ref=e857]
+            - cell "Puyloubier" [ref=e858]:
+              - link "Puyloubier" [ref=e859] [cursor=pointer]:
+                - /url: /commune/puyloubier-13
+            - cell "13114" [ref=e860]
+            - cell "1 768" [ref=e861]
+            - cell "2 776 h" [ref=e862]:
+              - generic [ref=e863]: 2 776 h
+          - row "102 Port-Saint-Louis-du-Rhône 13230 8 573 2 775 h" [ref=e864]:
+            - cell "102" [ref=e865]
+            - cell "Port-Saint-Louis-du-Rhône" [ref=e866]:
+              - link "Port-Saint-Louis-du-Rhône" [ref=e867] [cursor=pointer]:
+                - /url: /commune/port-saint-louis-du-rhone-13
+            - cell "13230" [ref=e868]
+            - cell "8 573" [ref=e869]
+            - cell "2 775 h" [ref=e870]:
+              - generic [ref=e871]: 2 775 h
+          - row "103 Port-de-Bouc 13110 15 802 2 774 h" [ref=e872]:
+            - cell "103" [ref=e873]
+            - cell "Port-de-Bouc" [ref=e874]:
+              - link "Port-de-Bouc" [ref=e875] [cursor=pointer]:
+                - /url: /commune/port-de-bouc-13
+            - cell "13110" [ref=e876]
+            - cell "15 802" [ref=e877]
+            - cell "2 774 h" [ref=e878]:
+              - generic [ref=e879]: 2 774 h
+          - row "104 Plan-d'Orgon 13750 3 573 2 773 h" [ref=e880]:
+            - cell "104" [ref=e881]
+            - cell "Plan-d'Orgon" [ref=e882]:
+              - link "Plan-d'Orgon" [ref=e883] [cursor=pointer]:
+                - /url: /commune/plan-d-orgon-13
+            - cell "13750" [ref=e884]
+            - cell "3 573" [ref=e885]
+            - cell "2 773 h" [ref=e886]:
+              - generic [ref=e887]: 2 773 h
+          - row "105 Plan-de-Cuques 13380 11 632 2 772 h" [ref=e888]:
+            - cell "105" [ref=e889]
+            - cell "Plan-de-Cuques" [ref=e890]:
+              - link "Plan-de-Cuques" [ref=e891] [cursor=pointer]:
+                - /url: /commune/plan-de-cuques-13
+            - cell "13380" [ref=e892]
+            - cell "11 632" [ref=e893]
+            - cell "2 772 h" [ref=e894]:
+              - generic [ref=e895]: 2 772 h
+          - row "106 Peyrolles-en-Provence 13860 5 409 2 771 h" [ref=e896]:
+            - cell "106" [ref=e897]
+            - cell "Peyrolles-en-Provence" [ref=e898]:
+              - link "Peyrolles-en-Provence" [ref=e899] [cursor=pointer]:
+                - /url: /commune/peyrolles-en-provence-13
+            - cell "13860" [ref=e900]
+            - cell "5 409" [ref=e901]
+            - cell "2 771 h" [ref=e902]:
+              - generic [ref=e903]: 2 771 h
+          - row "107 Peypin 13124 5 771 2 770 h" [ref=e904]:
+            - cell "107" [ref=e905]
+            - cell "Peypin" [ref=e906]:
+              - link "Peypin" [ref=e907] [cursor=pointer]:
+                - /url: /commune/peypin-13
+            - cell "13124" [ref=e908]
+            - cell "5 771" [ref=e909]
+            - cell "2 770 h" [ref=e910]:
+              - generic [ref=e911]: 2 770 h
+          - row "108 Peynier 13790 3 739 2 769 h" [ref=e912]:
+            - cell "108" [ref=e913]
+            - cell "Peynier" [ref=e914]:
+              - link "Peynier" [ref=e915] [cursor=pointer]:
+                - /url: /commune/peynier-13
+            - cell "13790" [ref=e916]
+            - cell "3 739" [ref=e917]
+            - cell "2 769 h" [ref=e918]:
+              - generic [ref=e919]: 2 769 h
+          - row "109 Les Pennes-Mirabeau 13170 22 537 2 768 h" [ref=e920]:
+            - cell "109" [ref=e921]
+            - cell "Les Pennes-Mirabeau" [ref=e922]:
+              - link "Les Pennes-Mirabeau" [ref=e923] [cursor=pointer]:
+                - /url: /commune/les-pennes-mirabeau-13
+            - cell "13170" [ref=e924]
+            - cell "22 537" [ref=e925]
+            - cell "2 768 h" [ref=e926]:
+              - generic [ref=e927]: 2 768 h
+          - row "110 La Penne-sur-Huveaune 13821 6 605 2 767 h" [ref=e928]:
+            - cell "110" [ref=e929]
+            - cell "La Penne-sur-Huveaune" [ref=e930]:
+              - link "La Penne-sur-Huveaune" [ref=e931] [cursor=pointer]:
+                - /url: /commune/la-penne-sur-huveaune-13
+            - cell "13821" [ref=e932]
+            - cell "6 605" [ref=e933]
+            - cell "2 767 h" [ref=e934]:
+              - generic [ref=e935]: 2 767 h
+          - row "111 La Barben 13330 868 2 760 h" [ref=e936]:
+            - cell "111" [ref=e937]
+            - cell "La Barben" [ref=e938]:
+              - link "La Barben" [ref=e939] [cursor=pointer]:
+                - /url: /commune/la-barben-13
+            - cell "13330" [ref=e940]
+            - cell "868" [ref=e941]
+            - cell "2 760 h" [ref=e942]:
+              - generic [ref=e943]: 2 760 h
+          - row "112 Aurons 13121 555 2 759 h" [ref=e944]:
+            - cell "112" [ref=e945]
+            - cell "Aurons" [ref=e946]:
+              - link "Aurons" [ref=e947] [cursor=pointer]:
+                - /url: /commune/aurons-13
+            - cell "13121" [ref=e948]
+            - cell "555" [ref=e949]
+            - cell "2 759 h" [ref=e950]:
+              - generic [ref=e951]: 2 759 h
+          - row "113 Auriol 13390 13 037 2 758 h" [ref=e952]:
+            - cell "113" [ref=e953]
+            - cell "Auriol" [ref=e954]:
+              - link "Auriol" [ref=e955] [cursor=pointer]:
+                - /url: /commune/auriol-13
+            - cell "13390" [ref=e956]
+            - cell "13 037" [ref=e957]
+            - cell "2 758 h" [ref=e958]:
+              - generic [ref=e959]: 2 758 h
+          - row "114 Aureille 13930 1 533 2 757 h" [ref=e960]:
+            - cell "114" [ref=e961]
+            - cell "Aureille" [ref=e962]:
+              - link "Aureille" [ref=e963] [cursor=pointer]:
+                - /url: /commune/aureille-13
+            - cell "13930" [ref=e964]
+            - cell "1 533" [ref=e965]
+            - cell "2 757 h" [ref=e966]:
+              - generic [ref=e967]: 2 757 h
+          - row "115 Aubagne 13400 47 529 2 756 h" [ref=e968]:
+            - cell "115" [ref=e969]
+            - cell "Aubagne" [ref=e970]:
+              - link "Aubagne" [ref=e971] [cursor=pointer]:
+                - /url: /commune/aubagne-13
+            - cell "13400" [ref=e972]
+            - cell "47 529" [ref=e973]
+            - cell "2 756 h" [ref=e974]:
+              - generic [ref=e975]: 2 756 h
+          - row "116 Arles 13104 51 811 2 755 h" [ref=e976]:
+            - cell "116" [ref=e977]
+            - cell "Arles" [ref=e978]:
+              - link "Arles" [ref=e979] [cursor=pointer]:
+                - /url: /commune/arles-13
+            - cell "13104" [ref=e980]
+            - cell "51 811" [ref=e981]
+            - cell "2 755 h" [ref=e982]:
+              - generic [ref=e983]: 2 755 h
+          - row "117 Alleins 13980 2 852 2 754 h" [ref=e984]:
+            - cell "117" [ref=e985]
+            - cell "Alleins" [ref=e986]:
+              - link "Alleins" [ref=e987] [cursor=pointer]:
+                - /url: /commune/alleins-13
+            - cell "13980" [ref=e988]
+            - cell "2 852" [ref=e989]
+            - cell "2 754 h" [ref=e990]:
+              - generic [ref=e991]: 2 754 h
+          - row "118 Allauch 13190 21 443 2 753 h" [ref=e992]:
+            - cell "118" [ref=e993]
+            - cell "Allauch" [ref=e994]:
+              - link "Allauch" [ref=e995] [cursor=pointer]:
+                - /url: /commune/allauch-13
+            - cell "13190" [ref=e996]
+            - cell "21 443" [ref=e997]
+            - cell "2 753 h" [ref=e998]:
+              - generic [ref=e999]: 2 753 h
+          - row "119 Aix-en-Provence 13080 149 695 2 752 h" [ref=e1000]:
+            - cell "119" [ref=e1001]
+            - cell "Aix-en-Provence" [ref=e1002]:
+              - link "Aix-en-Provence" [ref=e1003] [cursor=pointer]:
+                - /url: /commune/aix-en-provence-13
+            - cell "13080" [ref=e1004]
+            - cell "149 695" [ref=e1005]
+            - cell "2 752 h" [ref=e1006]:
+              - generic [ref=e1007]: 2 752 h
+  - contentinfo [ref=e1008]:
+    - generic [ref=e1009]:
+      - generic [ref=e1010]:
+        - generic [ref=e1011]:
+          - heading "☀️ Ensoleillement.fr" [level=3] [ref=e1012]:
+            - generic [ref=e1013]: ☀️
+            - text: Ensoleillement.fr
+          - paragraph [ref=e1014]: Retrouvez les données d'ensoleillement de toutes les communes de France. Comparez les heures de soleil par département et par région.
+        - generic [ref=e1015]:
+          - heading "Navigation" [level=3] [ref=e1016]
+          - list [ref=e1017]:
+            - listitem [ref=e1018]:
+              - link "Accueil" [ref=e1019] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e1020]:
+              - link "Régions de France" [ref=e1021] [cursor=pointer]:
+                - /url: /region
+            - listitem [ref=e1022]:
+              - link "Départements de France" [ref=e1023] [cursor=pointer]:
+                - /url: /departement
+            - listitem [ref=e1024]:
+              - link "À propos" [ref=e1025] [cursor=pointer]:
+                - /url: /a-propos
+            - listitem [ref=e1026]:
+              - link "Contact" [ref=e1027] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e1028]:
+          - heading "Informations légales" [level=3] [ref=e1029]
+          - list [ref=e1030]:
+            - listitem [ref=e1031]:
+              - link "Mentions légales" [ref=e1032] [cursor=pointer]:
+                - /url: /mentions-legales
+            - listitem [ref=e1033]:
+              - link "Politique de confidentialité" [ref=e1034] [cursor=pointer]:
+                - /url: /politique-de-confidentialite
+            - listitem [ref=e1035]:
+              - link "Plan du site" [ref=e1036] [cursor=pointer]:
+                - /url: /sitemap.xml
+      - paragraph [ref=e1038]: © 2026 Ensoleillement.fr - Toutes les données d'ensoleillement en France. Tous droits réservés.
+  - alert [ref=e1039]

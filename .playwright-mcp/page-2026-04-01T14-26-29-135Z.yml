@@ -1,0 +1,110 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "soleil Ensoleillement.fr" [ref=e5] [cursor=pointer]:
+          - /url: /
+          - img "soleil" [ref=e6]: ☀️
+          - generic [ref=e7]: Ensoleillement.fr
+        - generic [ref=e8]:
+          - link "Accueil" [ref=e9] [cursor=pointer]:
+            - /url: /
+          - link "Régions" [ref=e10] [cursor=pointer]:
+            - /url: /region
+          - link "Départements" [ref=e11] [cursor=pointer]:
+            - /url: /departement
+          - link "À propos" [ref=e12] [cursor=pointer]:
+            - /url: /a-propos
+  - main [ref=e13]:
+    - generic [ref=e14]:
+      - navigation "Fil d'Ariane" [ref=e15]:
+        - list [ref=e16]:
+          - listitem [ref=e17]:
+            - link "Accueil" [ref=e18] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e19]:
+            - generic [ref=e20]: /
+            - generic [ref=e21]: Mentions légales
+      - heading "Mentions légales" [level=1] [ref=e22]
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - heading "1. Éditeur du site" [level=2] [ref=e25]
+          - paragraph [ref=e26]:
+            - text: Le site
+            - strong [ref=e27]: taux-ensoleillement.fr
+            - text: "est édité par :"
+            - text: "Nom : [Nom de l'éditeur]"
+            - text: "Adresse : [Adresse postale]"
+            - text: "Email : contact@taux-ensoleillement.fr"
+            - text: "Directeur de la publication : [Nom du directeur de publication]"
+        - generic [ref=e28]:
+          - heading "2. Hébergeur" [level=2] [ref=e29]
+          - paragraph [ref=e30]:
+            - text: "Le site est hébergé par :"
+            - text: Vercel Inc.
+            - text: 440 N Bashaw St, San Francisco, CA 94107, États-Unis
+            - text: "Site web :"
+            - link "vercel.com" [ref=e31] [cursor=pointer]:
+              - /url: https://vercel.com
+        - generic [ref=e32]:
+          - heading "3. Propriété intellectuelle" [level=2] [ref=e33]
+          - paragraph [ref=e34]: L'ensemble du contenu du site taux-ensoleillement.fr (textes, images, graphiques, logo, icônes, etc.) est protégé par le droit d'auteur et le droit de la propriété intellectuelle. Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans l'autorisation écrite préalable de l'éditeur.
+        - generic [ref=e35]:
+          - heading "4. Sources des données" [level=2] [ref=e36]
+          - paragraph [ref=e37]: Les données d'ensoleillement présentées sur ce site proviennent de sources publiques, notamment Météo-France et l'INSEE. Ces données sont fournies à titre indicatif et ne sauraient engager la responsabilité de l'éditeur. Les données de population proviennent de l'INSEE.
+        - generic [ref=e38]:
+          - heading "5. Limitation de responsabilité" [level=2] [ref=e39]
+          - paragraph [ref=e40]: L'éditeur s'efforce de fournir des informations aussi précises que possible. Toutefois, il ne pourra être tenu responsable des omissions, des inexactitudes et des carences dans la mise à jour, qu'elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations. Toutes les informations indiquées sur le site sont données à titre indicatif et sont susceptibles d'évoluer.
+        - generic [ref=e41]:
+          - heading "6. Liens hypertextes" [level=2] [ref=e42]
+          - paragraph [ref=e43]: Le site taux-ensoleillement.fr peut contenir des liens hypertextes vers d'autres sites. Cependant, l'éditeur n'a pas la possibilité de vérifier le contenu des sites ainsi visités et n'assumera en conséquence aucune responsabilité de ce fait.
+        - generic [ref=e44]:
+          - heading "7. Cookies" [level=2] [ref=e45]
+          - paragraph [ref=e46]:
+            - text: Le site taux-ensoleillement.fr utilise des cookies pour améliorer l'expérience utilisateur et à des fins statistiques. Pour en savoir plus sur notre utilisation des cookies, veuillez consulter notre
+            - link "politique de confidentialité" [ref=e47] [cursor=pointer]:
+              - /url: /politique-de-confidentialite
+            - text: .
+        - generic [ref=e48]:
+          - heading "8. Droit applicable" [level=2] [ref=e49]
+          - paragraph [ref=e50]: Les présentes mentions légales sont régies par le droit français. En cas de litige, les tribunaux français seront seuls compétents.
+  - contentinfo [ref=e51]:
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - heading "☀️ Ensoleillement.fr" [level=3] [ref=e55]:
+            - generic [ref=e56]: ☀️
+            - text: Ensoleillement.fr
+          - paragraph [ref=e57]: Retrouvez les données d'ensoleillement de toutes les communes de France. Comparez les heures de soleil par département et par région.
+        - generic [ref=e58]:
+          - heading "Navigation" [level=3] [ref=e59]
+          - list [ref=e60]:
+            - listitem [ref=e61]:
+              - link "Accueil" [ref=e62] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e63]:
+              - link "Régions de France" [ref=e64] [cursor=pointer]:
+                - /url: /region
+            - listitem [ref=e65]:
+              - link "Départements de France" [ref=e66] [cursor=pointer]:
+                - /url: /departement
+            - listitem [ref=e67]:
+              - link "À propos" [ref=e68] [cursor=pointer]:
+                - /url: /a-propos
+            - listitem [ref=e69]:
+              - link "Contact" [ref=e70] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e71]:
+          - heading "Informations légales" [level=3] [ref=e72]
+          - list [ref=e73]:
+            - listitem [ref=e74]:
+              - link "Mentions légales" [ref=e75] [cursor=pointer]:
+                - /url: /mentions-legales
+            - listitem [ref=e76]:
+              - link "Politique de confidentialité" [ref=e77] [cursor=pointer]:
+                - /url: /politique-de-confidentialite
+            - listitem [ref=e78]:
+              - link "Plan du site" [ref=e79] [cursor=pointer]:
+                - /url: /sitemap.xml
+      - paragraph [ref=e81]: © 2026 Ensoleillement.fr - Toutes les données d'ensoleillement en France. Tous droits réservés.
+  - alert [ref=e82]
