@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Inter } from 'next/font/google';
-import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import CookieConsent from '@/components/CookieConsent';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -50,6 +51,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://taux-ensoleillement.fr',
   },
+  other: {
+    'google-adsense-account': 'ca-pub-1410054022694718',
+  },
 };
 
 export default function RootLayout({
@@ -80,11 +84,22 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-gray-50 text-gray-900">
+        {/* Google Consent Mode v2 — analytics autorisé par défaut (cookieless), ads requièrent le consentement */}
+        <Script id="consent-default" strategy="beforeInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});if(document.cookie.indexOf('cookie_consent=denied')>-1){gtag('consent','update',{analytics_storage:'denied'});}`}
+        </Script>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-PKF48JF2J9"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`gtag('js',new Date());gtag('config','G-PKF48JF2J9');`}
+        </Script>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <CookieConsent />
       </body>
-      <GoogleAnalytics gaId="G-PKF48JF2J9" />
     </html>
   );
 }
