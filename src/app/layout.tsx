@@ -95,6 +95,12 @@ export default function RootLayout({
         <Script id="gtag-init" strategy="afterInteractive">
           {`gtag('js',new Date());gtag('config','G-PKF48JF2J9');`}
         </Script>
+        {/* AdSense — requis pour la validation du site */}
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1410054022694718"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
