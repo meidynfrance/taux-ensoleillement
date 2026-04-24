@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { supabase } from '@/lib/supabase';
 import type { Commune } from '@/types';
 
 interface CommuneSearchInputProps {
@@ -38,15 +37,10 @@ export default function CommuneSearchInput({
 
     setLoading(true);
     try {
-      const { data, error } = await supabase
-        .from('communes')
-        .select('*')
-        .ilike('nom', `${search}%`)
-        .order('population', { ascending: false })
-        .limit(8);
-
-      if (error) throw error;
-      setResults((data as Commune[]) || []);
+      const res = await fetch(`/api/search?q=${encodeURIComponent(search)}`);
+      if (!res.ok) throw new Error('Search failed');
+      const data: Commune[] = await res.json();
+      setResults(data);
       setIsOpen(true);
     } catch {
       setResults([]);

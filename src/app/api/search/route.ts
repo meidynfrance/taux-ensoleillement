@@ -11,7 +11,7 @@ export async function GET(request: NextRequest) {
 
   try {
     const results = await sql<Commune[]>`
-      SELECT code_insee, nom, slug, code_postal, departement_code, ensoleillement_annuel
+      SELECT *
       FROM communes
       WHERE nom ILIKE ${q + '%'}
       ORDER BY population DESC NULLS LAST
