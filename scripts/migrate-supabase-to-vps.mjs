@@ -6,10 +6,17 @@
 import { createClient } from '@supabase/supabase-js';
 import postgres from 'postgres';
 
-const SUPABASE_URL = 'https://vbmnvtkuldiuotjnijrx.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZibW52dGt1bGRpdW90am5panJ4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUwNTI3MTUsImV4cCI6MjA5MDYyODcxNX0.QkoZuVj9VEgYuoJj27eDuCUeRyRB7ImFsQ4mkAZ-BH0';
-const DATABASE_URL = 'REDACTED_SEE_ENV';
+// Charger depuis les variables d'environnement (jamais hardcodé)
+// Créer un fichier .env.migration avec ces variables avant de lancer le script
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_KEY = process.env.SUPABASE_ANON_KEY;
+const DATABASE_URL = process.env.DATABASE_URL;
 const BATCH_SIZE   = 200;
+
+if (!SUPABASE_URL || !SUPABASE_KEY || !DATABASE_URL) {
+  console.error('Manque des variables d\'environnement : SUPABASE_URL, SUPABASE_ANON_KEY, DATABASE_URL');
+  process.exit(1);
+}
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 const sql = postgres(DATABASE_URL, { ssl: false, max: 3 });
