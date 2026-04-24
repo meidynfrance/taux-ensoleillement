@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { supabase } from '@/lib/supabase';
+import sql from '@/lib/db';
 import SearchBar from '@/components/SearchBar';
 import CommuneCard from '@/components/CommuneCard';
 import SunshineMapLoader from '@/components/SunshineMapLoader';
@@ -9,15 +9,13 @@ export const revalidate = 86400;
 
 async function getTopCommunes(): Promise<Commune[]> {
   try {
-    const { data, error } = await supabase
-      .from('communes')
-      .select('*')
-      .not('ensoleillement_annuel', 'is', null)
-      .order('ensoleillement_annuel', { ascending: false })
-      .limit(12);
-
-    if (error) throw error;
-    return (data as Commune[]) || [];
+    const rows = await sql<Commune[]>`
+      SELECT * FROM communes
+      WHERE ensoleillement_annuel IS NOT NULL
+      ORDER BY ensoleillement_annuel DESC
+      LIMIT 12
+    `;
+    return rows;
   } catch {
     return [];
   }
@@ -25,24 +23,36 @@ async function getTopCommunes(): Promise<Commune[]> {
 
 async function getTopDepartements(): Promise<Departement[]> {
   try {
-    const { data, error } = await supabase
-      .from('departements')
-      .select('*')
-      .not('ensoleillement_moyen', 'is', null)
-      .order('ensoleillement_moyen', { ascending: false })
-      .limit(10);
+    const rows = await sql<Departement[]>`
+      SELECT * FROM departements
+      WHERE ensoleillement_moyen IS NOT NULL
+      ORDER BY ensoleillement_moyen DESC
+      LIMIT 10
+    `;
+    return rows;
+  } catch {
+    return [];
+  }
+}
 
-    if (error) throw error;
-    return (data as Departement[]) || [];
+async function getDepartementsForMap(): Promise<Departement[]> {
+  try {
+    const rows = await sql<Departement[]>`
+      SELECT code, nom, slug, ensoleillement_moyen, latitude, longitude
+      FROM departements
+      WHERE latitude IS NOT NULL AND longitude IS NOT NULL
+    `;
+    return rows;
   } catch {
     return [];
   }
 }
 
 export default async function HomePage() {
-  const [topCommunes, topDepartements] = await Promise.all([
+  const [topCommunes, topDepartements, departementsMap] = await Promise.all([
     getTopCommunes(),
     getTopDepartements(),
+    getDepartementsForMap(),
   ]);
 
   return (
@@ -74,7 +84,7 @@ export default async function HomePage() {
           Cette carte interactive affiche les heures d&apos;ensoleillement annuelles moyennes pour chaque
           département français. Cliquez sur un département pour voir le détail.
         </p>
-        <SunshineMapLoader />
+        <SunshineMapLoader departements={departementsMap} />
       </section>
 
       {/* Top Communes */}

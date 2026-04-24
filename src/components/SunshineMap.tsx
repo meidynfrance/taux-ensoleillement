@@ -1,8 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet';
-import { supabase } from '@/lib/supabase';
 import type { Departement } from '@/types';
 import Link from 'next/link';
 
@@ -27,41 +25,11 @@ function getRadius(ensoleillement: number | null): number {
   return 9;
 }
 
-export default function SunshineMap() {
-  const [departements, setDepartements] = useState<Departement[]>([]);
-  const [loading, setLoading] = useState(true);
+interface Props {
+  departements: Departement[];
+}
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const { data, error } = await supabase
-          .from('departements')
-          .select('code, nom, slug, ensoleillement_moyen, latitude, longitude')
-          .not('latitude', 'is', null)
-          .not('longitude', 'is', null);
-
-        if (error) throw error;
-        setDepartements((data as Departement[]) || []);
-      } catch {
-        setDepartements([]);
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchData();
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="w-full h-[500px] bg-gray-100 rounded-xl flex items-center justify-center">
-        <div className="text-center">
-          <div className="h-10 w-10 border-4 border-amber-400 border-t-transparent rounded-full animate-spin mx-auto mb-3" />
-          <p className="text-gray-500">Chargement de la carte...</p>
-        </div>
-      </div>
-    );
-  }
-
+export default function SunshineMap({ departements }: Props) {
   return (
     <div className="w-full h-[500px] rounded-xl overflow-hidden border border-gray-200 shadow-sm">
       <MapContainer

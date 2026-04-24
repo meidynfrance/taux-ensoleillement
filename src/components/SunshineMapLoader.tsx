@@ -1,6 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import type { Departement } from '@/types';
 
 const SunshineMap = dynamic(() => import('@/components/SunshineMap'), {
   ssr: false,
@@ -14,6 +15,10 @@ const SunshineMap = dynamic(() => import('@/components/SunshineMap'), {
   ),
 });
 
-export default function SunshineMapLoader() {
-  return <SunshineMap />;
+interface Props {
+  departements: Departement[];
+}
+
+export default function SunshineMapLoader({ departements }: Props) {
+  return <SunshineMap departements={departements} />;
 }

@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import { supabase } from '@/lib/supabase';
 import type { Commune } from '@/types';
 
 export default function SearchBar() {
@@ -24,15 +23,10 @@ export default function SearchBar() {
 
     setLoading(true);
     try {
-      const { data, error } = await supabase
-        .from('communes')
-        .select('code_insee, nom, slug, code_postal, departement_code, ensoleillement_annuel')
-        .ilike('nom', `${search}%`)
-        .order('population', { ascending: false })
-        .limit(8);
-
-      if (error) throw error;
-      setResults((data as Commune[]) || []);
+      const res = await fetch(`/api/search?q=${encodeURIComponent(search)}`);
+      if (!res.ok) throw new Error('Search failed');
+      const data: Commune[] = await res.json();
+      setResults(data);
       setIsOpen(true);
     } catch {
       setResults([]);
