@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { supabase } from '@/lib/supabase';
+import sql from '@/lib/db';
 import Breadcrumb from '@/components/Breadcrumb';
 import type { Region, Departement } from '@/types';
 
@@ -13,14 +13,10 @@ interface PageProps {
 
 async function getRegion(slug: string): Promise<Region | null> {
   try {
-    const { data, error } = await supabase
-      .from('regions')
-      .select('*')
-      .eq('slug', slug)
-      .single();
-
-    if (error) return null;
-    return data as Region;
+    const rows = await sql<Region[]>`
+      SELECT * FROM regions WHERE slug = ${slug} LIMIT 1
+    `;
+    return rows[0] ?? null;
   } catch {
     return null;
   }
@@ -28,14 +24,11 @@ async function getRegion(slug: string): Promise<Region | null> {
 
 async function getDepartements(regionCode: string): Promise<Departement[]> {
   try {
-    const { data, error } = await supabase
-      .from('departements')
-      .select('*')
-      .eq('region_code', regionCode)
-      .order('ensoleillement_moyen', { ascending: false, nullsFirst: false });
-
-    if (error) throw error;
-    return (data as Departement[]) || [];
+    return await sql<Departement[]>`
+      SELECT * FROM departements
+      WHERE region_code = ${regionCode}
+      ORDER BY ensoleillement_moyen DESC NULLS LAST
+    `;
   } catch {
     return [];
   }
@@ -60,12 +53,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export async function generateStaticParams() {
   try {
-    const { data, error } = await supabase
-      .from('regions')
-      .select('slug');
-
-    if (error) return [];
-    return (data || []).map((r) => ({ slug: r.slug }));
+    const rows = await sql<{ slug: string }[]>`SELECT slug FROM regions`;
+    return rows.map((r) => ({ slug: r.slug }));
   } catch {
     return [];
   }

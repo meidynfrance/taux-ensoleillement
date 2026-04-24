@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { supabase } from '@/lib/supabase';
+import sql from '@/lib/db';
 import Breadcrumb from '@/components/Breadcrumb';
 import type { Region } from '@/types';
 
@@ -16,13 +16,10 @@ export const metadata: Metadata = {
 
 async function getRegions(): Promise<Region[]> {
   try {
-    const { data, error } = await supabase
-      .from('regions')
-      .select('*')
-      .order('ensoleillement_moyen', { ascending: false, nullsFirst: false });
-
-    if (error) throw error;
-    return (data as Region[]) || [];
+    return await sql<Region[]>`
+      SELECT * FROM regions
+      ORDER BY ensoleillement_moyen DESC NULLS LAST
+    `;
   } catch {
     return [];
   }

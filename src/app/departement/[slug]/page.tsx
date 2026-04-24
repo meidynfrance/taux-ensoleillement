@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { supabase } from '@/lib/supabase';
+import sql from '@/lib/db';
 import Breadcrumb from '@/components/Breadcrumb';
 import type { DepartementWithRegion, Commune } from '@/types';
 
@@ -13,14 +13,34 @@ interface PageProps {
 
 async function getDepartement(slug: string): Promise<DepartementWithRegion | null> {
   try {
-    const { data, error } = await supabase
-      .from('departements')
-      .select('*, regions(code, nom, slug)')
-      .eq('slug', slug)
-      .single();
-
-    if (error) return null;
-    return data as DepartementWithRegion;
+    const rows = await sql`
+      SELECT
+        d.id, d.code, d.nom, d.slug, d.region_code, d.ensoleillement_moyen,
+        d.latitude, d.longitude, d.description,
+        r.code  AS rg_code,
+        r.nom   AS rg_nom,
+        r.slug  AS rg_slug
+      FROM departements d
+      LEFT JOIN regions r ON d.region_code = r.code
+      WHERE d.slug = ${slug}
+      LIMIT 1
+    `;
+    if (!rows.length) return null;
+    const row = rows[0];
+    return {
+      id:                  row.id,
+      code:                row.code,
+      nom:                 row.nom,
+      slug:                row.slug,
+      region_code:         row.region_code,
+      ensoleillement_moyen: row.ensoleillement_moyen,
+      latitude:            row.latitude,
+      longitude:           row.longitude,
+      description:         row.description,
+      regions: row.rg_code
+        ? { code: row.rg_code, nom: row.rg_nom, slug: row.rg_slug, ensoleillement_moyen: null }
+        : undefined,
+    } as DepartementWithRegion;
   } catch {
     return null;
   }
@@ -28,14 +48,12 @@ async function getDepartement(slug: string): Promise<DepartementWithRegion | nul
 
 async function getCommunes(deptCode: string): Promise<Commune[]> {
   try {
-    const { data, error } = await supabase
-      .from('communes')
-      .select('code_insee, nom, slug, code_postal, departement_code, population, ensoleillement_annuel')
-      .eq('departement_code', deptCode)
-      .order('ensoleillement_annuel', { ascending: false, nullsFirst: false });
-
-    if (error) throw error;
-    return (data as Commune[]) || [];
+    return await sql<Commune[]>`
+      SELECT code_insee, nom, slug, code_postal, departement_code, population, ensoleillement_annuel
+      FROM communes
+      WHERE departement_code = ${deptCode}
+      ORDER BY ensoleillement_annuel DESC NULLS LAST
+    `;
   } catch {
     return [];
   }
@@ -60,12 +78,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export async function generateStaticParams() {
   try {
-    const { data, error } = await supabase
-      .from('departements')
-      .select('slug');
-
-    if (error) return [];
-    return (data || []).map((d) => ({ slug: d.slug }));
+    const rows = await sql<{ slug: string }[]>`SELECT slug FROM departements`;
+    return rows.map((d) => ({ slug: d.slug }));
   } catch {
     return [];
   }

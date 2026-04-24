@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useCallback, useRef } from 'react';
 import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet';
-import { supabase } from '@/lib/supabase';
 import type { Departement } from '@/types';
 import { useRouter } from 'next/navigation';
 import type { Feature, FeatureCollection, Geometry } from 'geojson';
@@ -34,42 +33,29 @@ function lightenColor(hex: string): string {
   return `#${lighten(r).toString(16).padStart(2, '0')}${lighten(g).toString(16).padStart(2, '0')}${lighten(b).toString(16).padStart(2, '0')}`;
 }
 
-export default function SunshineMap() {
-  const [departements, setDepartements] = useState<Departement[]>([]);
+interface Props {
+  departements: Departement[];
+}
+
+export default function SunshineMap({ departements }: Props) {
   const [geojson, setGeojson] = useState<FeatureCollection | null>(null);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
   const deptMapRef = useRef<Map<string, Departement>>(new Map());
 
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const [supabaseResult, geoResponse] = await Promise.all([
-          supabase
-            .from('departements')
-            .select('code, nom, slug, region_code, ensoleillement_moyen, latitude, longitude'),
-          fetch('/data/departements.geojson'),
-        ]);
+    // Build lookup map from props (server-fetched, no client DB call needed)
+    const map = new Map<string, Departement>();
+    departements.forEach((d) => map.set(d.code, d));
+    deptMapRef.current = map;
 
-        if (supabaseResult.error) throw supabaseResult.error;
-        const depts = (supabaseResult.data as Departement[]) || [];
-        setDepartements(depts);
-
-        const map = new Map<string, Departement>();
-        depts.forEach((d) => map.set(d.code, d));
-        deptMapRef.current = map;
-
-        const geo = await geoResponse.json();
-        setGeojson(geo as FeatureCollection);
-      } catch {
-        setDepartements([]);
-        setGeojson(null);
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchData();
-  }, []);
+    // Only fetch the GeoJSON boundaries (static public file)
+    fetch('/data/departements.geojson')
+      .then((r) => r.json())
+      .then((geo) => setGeojson(geo as FeatureCollection))
+      .catch(() => setGeojson(null))
+      .finally(() => setLoading(false));
+  }, [departements]);
 
   const style = useCallback(
     (feature: Feature<Geometry, DeptProperties> | undefined): PathOptions => {
@@ -95,7 +81,6 @@ export default function SunshineMap() {
       const nom = dept?.nom ?? feature.properties?.nom ?? '';
       const ensoleillement = dept?.ensoleillement_moyen;
 
-      // Bind tooltip for hover
       const tooltipContent = `
         <div style="text-align:center;font-family:system-ui,sans-serif;">
           <strong>${nom}</strong> (${code})<br/>
