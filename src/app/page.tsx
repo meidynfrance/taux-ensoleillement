@@ -3,6 +3,7 @@ import sql from '@/lib/db';
 import SearchBar from '@/components/SearchBar';
 import CommuneCard from '@/components/CommuneCard';
 import SunshineMapLoader from '@/components/SunshineMapLoader';
+import AdBanner from '@/components/AdBanner';
 import type { Commune, Departement } from '@/types';
 
 export const revalidate = 86400;
@@ -86,6 +87,11 @@ export default async function HomePage() {
         </p>
         <SunshineMapLoader departements={departementsMap} />
       </section>
+
+      {/* Pub 300×250 — après la carte */}
+      <div className="flex justify-center py-6">
+        <AdBanner size="300x250" />
+      </div>
 
       {/* Top Communes */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
