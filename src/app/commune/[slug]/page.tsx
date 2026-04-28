@@ -5,6 +5,7 @@ import sql from '@/lib/db';
 import Breadcrumb from '@/components/Breadcrumb';
 import MonthlyChart from '@/components/MonthlyChart';
 import CommuneCard from '@/components/CommuneCard';
+import AdBanner from '@/components/AdBanner';
 import type { CommuneWithDepartement, Commune } from '@/types';
 
 export const revalidate = 86400;
@@ -241,6 +242,11 @@ export default async function CommunePage({ params }: PageProps) {
           <MonthlyChart commune={commune} />
         </div>
 
+        {/* Pub 300×250 — après le graphique mensuel */}
+        <div className="flex justify-center mb-12">
+          <AdBanner size="300x250" />
+        </div>
+
         {/* Info commune */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div className="bg-white rounded-xl border border-gray-200 p-6">
@@ -329,6 +335,11 @@ export default async function CommunePage({ params }: PageProps) {
               )}
             </div>
           </div>
+        </div>
+
+        {/* Pub 300×250 — avant les communes voisines */}
+        <div className="flex justify-center mb-12">
+          <AdBanner size="300x250" />
         </div>
 
         {/* Communes voisines */}

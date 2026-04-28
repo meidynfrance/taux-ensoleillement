@@ -5,6 +5,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CookieConsent from '@/components/CookieConsent';
+import AdStickyMobile from '@/components/AdStickyMobile';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -97,9 +98,19 @@ export default function RootLayout({
           {`gtag('js',new Date());gtag('config','G-PKF48JF2J9');`}
         </Script>
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 pb-[100px] md:pb-0">{children}</main>
         <Footer />
         <CookieConsent />
+        {/* Barre sticky mobile 300×100 */}
+        <AdStickyMobile />
+        {/* Popunder HilltopAds — format le mieux rémunéré, charge après interaction */}
+        <Script
+          id="hilltopads-popunder"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(otmuxr){var d=document,s=d.createElement('script'),l=d.scripts[d.scripts.length-1];s.settings=otmuxr||{};s.src="\/\/smooth-survey.com\/cHD\/9X6.bf2\/5TliSjW\/QN9\/N_jCkf5rNNjrE\/zwNmys0H2\/OET\/kQ2WM\/THQIxG";s.async=true;s.referrerPolicy='no-referrer-when-downgrade';l.parentNode.insertBefore(s,l);})({})`          ,
+          }}
+        />
       </body>
     </html>
   );

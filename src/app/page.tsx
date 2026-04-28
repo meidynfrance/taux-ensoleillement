@@ -4,6 +4,7 @@ import SearchBar from '@/components/SearchBar';
 import CommuneCard from '@/components/CommuneCard';
 import SunshineMapLoader from '@/components/SunshineMapLoader';
 import CompareCommunes from '@/components/CompareCommunes';
+import AdBanner from '@/components/AdBanner';
 import type { Commune, Departement } from '@/types';
 
 export const revalidate = 86400;
@@ -90,6 +91,11 @@ export default async function HomePage() {
 
       {/* Compare */}
       <CompareCommunes />
+
+      {/* Pub 300×250 — après la comparaison */}
+      <div className="flex justify-center py-6">
+        <AdBanner size="300x250" />
+      </div>
 
       {/* Top Communes */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
@@ -195,7 +201,7 @@ export default async function HomePage() {
             const slug = region
               .toLowerCase()
               .normalize('NFD')
-              .replace(/[\u0300-\u036f]/g, '')
+              .replace(/[̀-ͯ]/g, '')
               .replace(/[^a-z0-9]+/g, '-')
               .replace(/^-|-$/g, '');
             return (

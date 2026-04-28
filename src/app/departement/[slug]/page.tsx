@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import sql from '@/lib/db';
 import Breadcrumb from '@/components/Breadcrumb';
+import AdBanner from '@/components/AdBanner';
 import type { DepartementWithRegion, Commune } from '@/types';
 
 export const revalidate = 86400;
@@ -186,6 +187,11 @@ export default async function DepartementPage({ params }: PageProps) {
               <> Retrouvez ci-dessous le classement des {communes.length.toLocaleString('fr-FR')} communes du département classées par heures d&apos;ensoleillement annuel.</>
             )}
           </p>
+        </div>
+
+        {/* Pub 300×250 — avant le tableau des communes */}
+        <div className="flex justify-center mb-10">
+          <AdBanner size="300x250" />
         </div>
 
         {/* Communes table */}
